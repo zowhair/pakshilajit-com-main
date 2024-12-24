@@ -1,0 +1,106 @@
+.custom-header {
+    background-color: #000;
+    width: 100%;
+}
+.custom-header .page-width {
+    max-width: 1440px;
+    padding: 0 30px;
+    position: relative;
+    margin: 0 auto;
+}
+.custom-header .search-modal {
+    background: #5a7460 !important;
+}
+.custom-header .header {
+    padding: 16px 0 !important;
+    margin: 0;
+    width: 100%;
+    left: 0px !important;
+    border: none !important;
+    background: transparent !important;
+    display: flex;
+    justify-content: space-between;
+}
+.custom-header .header__heading-link {
+    margin-left: 0px !important;
+    aspect-ratio: 1 / 0.4;
+    height: 100% !important;
+    width: 165px !important;
+}
+.custom-header .header__menu-item {
+    font-size: 1.6rem;
+    color:#ffffff !important;
+    font-family: Helvetica;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.custom-header .header__active-menu-item {
+    color: #FFFFFF !important;
+    text-decoration: none;
+}
+.custom-header .header__heading-logo-wrapper {
+    height: 100%;
+}
+.custom-header .header__heading-logo {
+    height: 100% !important;
+    object-fit: contain;
+}
+.custom-header .header--middle-left {
+    grid-template-areas: "heading navigation icons";
+}
+.custom-header .header__icons svg {
+    color: white !important;
+}
+.custom-header .header__icon {
+    cursor: pointer;
+}
+.custom-header .custom_user--icon svg {
+    color: #ffffff;
+    fill: #ffffff;
+}
+/* .custom-header .search-modal__close-button svg {
+    color: black !important;
+} */
+@media screen and (max-width:989px) {
+    .header__inline-menu {
+        margin-left: 0px;
+        display: block;
+    }
+    .custom-header header-drawer {
+        display: none;
+    }
+    .custom-header header-drawer {
+        justify-self: start;
+        margin-left: 0;
+        grid-column-start: none;
+    }
+    .custom-header .header__heading {
+        justify-self: start;
+    }
+}
+@media screen and (max-width:767px) {
+    .header__inline-menu {
+        display: none;
+    }
+    .custom-header .custom_user--icon {
+        display: none;
+    }
+    .custom-header header-drawer {
+        display: block;
+    }
+    .custom-header .header {
+        padding: 14px 0 !important;
+    }
+    .custom-header .page-width {
+        padding: 0 20px;
+    }
+    .custom-header .header__heading-link {
+        aspect-ratio: 1 / .64;
+        padding: 0;
+        width: 100px !important;
+    }
+    .custom-header .header__icon--menu .icon {
+        color: white;
+    }
+   
+}

@@ -1,0 +1,117 @@
+.slider .swiper-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* gap: 2rem; */
+    margin-top: 20px;
+}
+.slider .swiper-wrapper .swiper-slide {
+    height: auto;
+    /* border: 3px solid #F1B51E;     */
+    padding: 15px 20px 15px 30px;
+    height: auto;
+    border-radius: 20px;
+    background-color: #FFF6DF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+.colored-bg {
+    background-color: #fff1cd29;
+    padding-top: 30px;
+    padding-bottom: 100px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.heading-title{
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    line-height: 1.2em;
+    margin-top: 20px;
+
+}
+
+.swiper-slide .swiper-ico {
+    fill: #000;
+    width: 1em;
+    /* height: 32px; */
+    line-height: 1;
+    transition: all .3s;
+    width: 50px;
+    /* font-size: 50px; */
+    /* margin-bottom: 30px; */
+
+}
+.description-div {
+    font-size: 14px;
+    line-height: 1.6em;
+    font-weight: 500;
+    font-family: Montserrat,sans-serif;
+
+}
+.description-div ul {
+    list-style: none;
+}
+.description-div .descriptions {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    list-style-type: disc;
+}
+.divider {
+    margin: 20px auto;
+
+}
+.colored-bg .text-section{
+    text-align: center;
+}
+.colored-bg .slider {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    /* padding: 40px; */
+}
+.colored-bg .slider .slider-navigation {
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+}
+
+.colored-bg div:empty {
+    display: block;
+}
+  .swiper-container {
+    width: 100%;
+    overflow: hidden  ;
+  }
+ .colored-bg .heading {
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .6px;
+    margin: 0 0 56px;
+  }
+@media screen and (max-width: 767px){
+    .colored-bg .heading {
+        font-size: 18px;
+        margin: 0 0 30px;
+    }
+}
+@media screen and (max-width: 550px){
+    .colored-bg .slider {
+        padding: 0;
+    }
+}

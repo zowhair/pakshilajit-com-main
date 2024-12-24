@@ -1,0 +1,69 @@
+<div class="">
+    <div class="">
+        <div class="">
+            {% assign collec_ = collections[section.settings.collection_id] %}
+            {% for product in collec_.products %}
+                {{ product.title }}
+                <div class="product_card__grid">
+                    {% for block in section.blocks %}
+                    {% assign product = block.settings.product %}
+                    {% if product.featured_image != blank or product.title != blank %}
+                        <div class="product_card-__item">
+                        <a href="{{ product.url }}" class="product_card__inner">
+                            {% if product.featured_image != blank %}
+                            <div class="product_card__image">
+                                <img src="{{ product.featured_image |  image_url: width: "600x" }}" alt="">
+                            </div>
+                            {% endif %}
+                            {% if product.title != blank or product.price != blank %}
+                            <div class="inner-text-wrap">
+                                <span class="product__per-shot">$3.50 PER SHOT</span>
+                                <p class="product__sub--title">{{ product.title }}</p>
+                            </div>
+                            <div class="product__content-wrap">
+                                <div class="price-inner">
+                                {% comment %} <span class="price_per-g">30g</span> {% endcomment %}
+                                <div class="price_wrapper">
+                                    <span class="product__price price">{{ product.price | money }}</span>
+                                    <span class="product__compare-price price">{{ product.compare_at_price | money }}</span>
+                                </div>
+                                </div>
+                                {%- render 'buy-buttons',
+                                block: block,
+                                product: product,
+                                product_form_id: product_form_id,
+                                section_id: section.id,
+                                show_pickup_availability: true
+                                -%}
+                            </div>
+                            {% endif %}
+                        </a>
+                        </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "collection",
+        "settings": [
+            {
+                "type": "collection",
+                "id" : "collection_id",
+                "label": "collection is selected"
+            }
+        ],
+        "presets" : [
+            {
+                "name": "wholesale"
+                
+            }
+        ]
+    }
+    
+    
+{% endschema %}

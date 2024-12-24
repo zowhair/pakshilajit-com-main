@@ -1,0 +1,496 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "square"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Why You Choose Pak Shilajit",
+            "icon": "none",
+            "content": "<p><strong>The Only True 45-60 Day Sundried Himalayan Shilajit Resin – <\/strong>Introducing our premium Shilajit resin, sourced from the highest mountain peaks of the Himalayas at 17,000 feet above sea level.<\/p><p>Since we have started our business in Pakistan, now several other companies are claiming they have the same quality factors as us, 17000 ft and 45 day sundried – 6-12 months ago they never made such claims, as they do not know what it really is.<br\/><br\/>Our Shilajit is harvested from the exudates of rocks and undergoes a meticulous 45-day sun-drying process, followed by a 30-day filtration process to ensure maximum purity and potency. Unlike other brands that use fire drying, our sun-drying method preserves the natural potency of minerals and bioactive compounds, resulting in a superior product.<\/p><p><strong>Our Sundried Shilajit boasts an impressive amount of genuine fulvic acid concentration<\/strong>, along with a rich array of trace minerals such as silver, sulfur, <strong>iodine<\/strong>, <strong>iron<\/strong>, and <strong>amino acids<\/strong>. It also contains key nutrients including boron, <strong>calcium<\/strong>, cobalt, <strong>copper<\/strong>, <strong>magnesium<\/strong>, manganese, molybdenum, nickel, <strong>potassium<\/strong>, <strong>selenium<\/strong>, and <strong>zinc.<\/strong><\/p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How to use PakShilajit",
+            "icon": "none",
+            "content": "<p>PakShilajit® can be used in various ways:<\/p><ul><li><strong>Orally<\/strong> –  take a rice grain or pea-size amount of PakShilajit® once or twice a day, mixed with warm water (preferred), milk, or any other preferred beverage.<\/li><li><strong>Facemask<\/strong> – the antioxidants and minerals are very beneficial for the skin.<\/li><li><strong>Teeth mineralistion<\/strong> – apply PakShialjit® to teeth before bed, the high calcium content and trace minerals can help make teeth strong.<\/li><li><strong>Pets<\/strong> – All animals can take a smaller serving less frequently, try it out and notice their energy improve, plus a nice shiny coat – try adding it to their meals.<\/li><li><strong>Gardening?<\/strong> – Yes, really! Plants love shilajit due to the fulvic acid content, as it helps nutrient absorption and imporves the soil quality.<\/li><\/ul>",
+            "page": ""
+          }
+        },
+        "collapsible-row-3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Quality Control",
+            "icon": "none",
+            "content": "<p>Manufactured in a facility that follows GMP standards.<\/p><p>Extensively examined & tested for heavy metals, contaminants, and microbiological content by independent, certified laboratories in USA, UAE, Pakistan, AUS.<\/p><p>All PakShilajit™ products undergo annual re-testing to verify mineral content, heavy metals and microbiological saftey levels remain consistent.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "caption",
+        "price",
+        "variant_picker",
+        "description",
+        "buy_buttons",
+        "collapsible-row-1",
+        "collapsible-row-2",
+        "collapsible-row-3"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "text_with_icon_DAgRdd": {
+      "type": "text-with-icon",
+      "blocks": {
+        "block_XgGMjn": {
+          "type": "block",
+          "settings": {
+            "icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 16 16\" width=\"1em\" height=\"1em\" fill=\"currentColor\" role=\"presentation\" style=\"width:var(--rsw, 100%);height:100%\" class=\"r-1i4l8au\"><path d=\"M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z\"><\/path><\/svg>",
+            "icon_svg": "shopify:\/\/shop_images\/53000_customers.png",
+            "title": "53,000+ Happy Customers"
+          }
+        },
+        "block_zeJBRF": {
+          "type": "block",
+          "settings": {
+            "icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-flag\" style=\"fill: none;stroke: currentColor;width: var(--rsw, 100%);height: 100%\" role=\"presentation\"><path d=\"M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z\"><\/path><line x1=\"4\" y1=\"22\" x2=\"4\" y2=\"15\"><\/line><\/svg>",
+            "icon_svg": "shopify:\/\/shop_images\/made_in_Pakshilajit.png",
+            "title": "Made in the Pakistan"
+          }
+        },
+        "block_wY9tdT": {
+          "type": "block",
+          "settings": {
+            "icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-truck\" style=\"fill: none;stroke: currentColor;width: var(--rsw, 100%);height: 100%\" role=\"presentation\"><rect x=\"1\" y=\"3\" width=\"15\" height=\"13\"><\/rect><polygon points=\"16 8 20 8 23 11 23 16 16 16 16 8\"><\/polygon><circle cx=\"5.5\" cy=\"18.5\" r=\"2.5\"><\/circle><circle cx=\"18.5\" cy=\"18.5\" r=\"2.5\"><\/circle><\/svg>",
+            "icon_svg": "shopify:\/\/shop_images\/free_shipping.png",
+            "title": "Free Shipping"
+          }
+        },
+        "block_9EpBM4": {
+          "type": "block",
+          "settings": {
+            "icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 16 16\" width=\"1em\" height=\"1em\" fill=\"currentColor\" role=\"presentation\" style=\"width:var(--rsw, 100%);height:100%\" class=\"r-1i55cys\"><path d=\"M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z\"><\/path><\/svg>",
+            "icon_svg": "shopify:\/\/shop_images\/money_back_top.png",
+            "title": "100% Money-back guarantee"
+          }
+        }
+      },
+      "block_order": [
+        "block_XgGMjn",
+        "block_zeJBRF",
+        "block_wY9tdT",
+        "block_9EpBM4"
+      ],
+      "settings": {}
+    },
+    "custom_lab_test_RKKbWD": {
+      "type": "custom-lab-test",
+      "disabled": true,
+      "settings": {
+        "title": "Rigorously Lab-Tested in the USA",
+        "para": "<p>Pak Shilajit products undergo rigorous third-party lab testing in the USA to ensure purity, potency, and safety. Ditch the cheap shilajit gummies and resin made in overseas labs with minimal safety regulations. Pak Shilajit resin lab results show it contains 74% fulvic & humic acid with 12x more antioxidants than one serving of blueberries.<\/p>",
+        "btn_text": "Shop now",
+        "btn_url": ""
+      }
+    },
+    "review_slider_WEQjM6": {
+      "type": "review-slider",
+      "blocks": {
+        "review_blocks_tD4nLg": {
+          "type": "review-blocks",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/shilajit-review-01.webp"
+          }
+        },
+        "review_blocks_9czTWD": {
+          "type": "review-blocks",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/pakshilajit-review-02.webp"
+          }
+        },
+        "review_blocks_VMrrKc": {
+          "type": "review-blocks",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/pakshilajit-review-03.webp"
+          }
+        },
+        "review_blocks_GkUBiW": {
+          "type": "review-blocks",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/pakshilajit-review-04.webp"
+          }
+        },
+        "review_blocks_YKRLHH": {
+          "type": "review-blocks",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/pakshilajit-review-05.webp"
+          }
+        },
+        "review_blocks_dU6aR7": {
+          "type": "review-blocks",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/pakshilajit-review-07.webp"
+          }
+        },
+        "review_blocks_PaNzX7": {
+          "type": "review-blocks",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/pakshilajit-review-08.webp"
+          }
+        }
+      },
+      "block_order": [
+        "review_blocks_tD4nLg",
+        "review_blocks_9czTWD",
+        "review_blocks_VMrrKc",
+        "review_blocks_GkUBiW",
+        "review_blocks_YKRLHH",
+        "review_blocks_dU6aR7",
+        "review_blocks_PaNzX7"
+      ],
+      "settings": {
+        "review_section_title": "OVER 53000 Customers ALL Around the World",
+        "review_section_description": "8 out of 10 Customers Feel the Effect of Shilajit after Single Usage. PakShilajit have over 53000 Customers all over the world which are get huge benefits from our Premium Sundried Himalayan Shilajit."
+      }
+    },
+    "lab_test_section_iUVHNb": {
+      "type": "lab-test-section",
+      "blocks": {
+        "slider_block_dpGANY": {
+          "type": "slider-block",
+          "settings": {
+            "slider_block_title": "Quality of Raw Material",
+            "slider_block_description": "We only collect the raw materials above 17000ft Gold Graded quality From Himalayan Mountains"
+          }
+        },
+        "slider_block_JXbEhC": {
+          "type": "slider-block",
+          "settings": {
+            "slider_block_title": "Filtration Process",
+            "slider_block_description": "We use traditional methods of the purification Filtration process for 30 days. We Do strict eyes on Filtration."
+          }
+        },
+        "slider_block_JCpr3E": {
+          "type": "slider-block",
+          "settings": {
+            "slider_block_title": "SunDried Process",
+            "slider_block_description": "We Only Use Sundried Process to Dried the Shilajit. which takes almost 45 days to dried shilajit."
+          }
+        },
+        "tabs_data_WR4iDA": {
+          "type": "tabs-data",
+          "settings": {
+            "tabs_title": "USA Report",
+            "tab_content": "shopify:\/\/shop_images\/shilajit-lab-report-usa.webp"
+          }
+        },
+        "tabs_data_rBdw4p": {
+          "type": "tabs-data",
+          "settings": {
+            "tabs_title": "EuroFin Report",
+            "tab_content": "shopify:\/\/shop_images\/shilajit-lab-report-pakshilajit-eurofin.webp"
+          }
+        },
+        "tabs_data_wdUNg4": {
+          "type": "tabs-data",
+          "settings": {
+            "tabs_title": "UAE Report",
+            "tab_content": "shopify:\/\/shop_images\/uae-lab-report.uae.webp"
+          }
+        }
+      },
+      "block_order": [
+        "slider_block_dpGANY",
+        "slider_block_JXbEhC",
+        "slider_block_JCpr3E",
+        "tabs_data_WR4iDA",
+        "tabs_data_rBdw4p",
+        "tabs_data_wdUNg4"
+      ],
+      "settings": {
+        "section_title": "Pakistan First Lab Tested Shilajit Brand",
+        "secondary_title": "Rigorously Lab-Tested in the UAE, USA, AUS, Pakistan",
+        "secondary_description": "<p>PakShilajit products undergo rigorous third-party lab testing in the USA, UAE, AUS, Pakistan to ensure purity, potency, and safety. PakShilajit resin lab results show it contains 71% fulvic & humic acid with 12x more antioxidants than other shilajit resin in the market.<\/p>"
+      }
+    },
+    "video_zVehYp": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "heading": "Doctors Approved UAE First Shilajit Brand",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https:\/\/youtu.be\/E-6g_i2Rkb0?si=XHomvOn2ZnH7q7AC",
+        "description": "Himalayan Shilajit",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "health_benefits_iBXLGg": {
+      "type": "health-benefits",
+      "blocks": {
+        "icon_text_9AiAzM": {
+          "type": "icon_text",
+          "settings": {
+            "icon_text": "Energy Boost",
+            "icon_text_svg": "shopify:\/\/shop_images\/energy-boost_50x_29dbd58e-8961-4406-9a63-c52e87e891b2.png"
+          }
+        },
+        "icon_text_aC6C8G": {
+          "type": "icon_text",
+          "settings": {
+            "icon_text": "Cellular Repair",
+            "icon_text_svg": "shopify:\/\/shop_images\/anti-aging_50x_a43b261a-88c0-4182-9f11-357af3260512.png"
+          }
+        },
+        "icon_text_4KFbwX": {
+          "type": "icon_text",
+          "settings": {
+            "icon_text": "Immune Support",
+            "icon_text_svg": "shopify:\/\/shop_images\/ammun_support_50x_18d6992a-e319-4d57-9261-73c1ed6186c6.png"
+          }
+        },
+        "icon_text_RgD3nr": {
+          "type": "icon_text",
+          "settings": {
+            "icon_text": "Cognitive Function",
+            "icon_text_svg": "shopify:\/\/shop_images\/cognitive_function_50x_e53f3d7f-96b3-45bd-8c27-14e9a4f0c4c4.png"
+          }
+        },
+        "icon_text_LBDdye": {
+          "type": "icon_text",
+          "settings": {
+            "icon_text": "Stamina and Endurance",
+            "icon_text_svg": "shopify:\/\/shop_images\/stamina_50x_b7404c98-c7ea-4a18-b4c2-037b2265f873.png"
+          }
+        },
+        "icon_text_8VpdFX": {
+          "type": "icon_text",
+          "settings": {
+            "icon_text": "Testosterone and Fertility",
+            "icon_text_svg": "shopify:\/\/shop_images\/Increased_Testosterone_50x_6ea91dd3-f572-4eee-b836-658af5cc60a4.png"
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_9AiAzM",
+        "icon_text_aC6C8G",
+        "icon_text_4KFbwX",
+        "icon_text_RgD3nr",
+        "icon_text_LBDdye",
+        "icon_text_8VpdFX"
+      ],
+      "disabled": true,
+      "settings": {
+        "health_title": "Proven Health Benefits Backed By Science",
+        "health_description": "Shilajit isn't just a miracle of nature—its incredible benefits are backed by numerous research studies.",
+        "sub_description": "Results are subject to each individual’s response to shilajit. Claims are made based on published clinical research.*",
+        "cta_text": "SEE ALL BENEFITS",
+        "cta_url": ""
+      }
+    },
+    "benefits_section_rdz78Y": {
+      "type": "benefits-section",
+      "blocks": {
+        "benefit_blocks_4XNHU9": {
+          "type": "benefit-blocks",
+          "settings": {
+            "benefit_block_title": "Boost your energy",
+            "benefit_block_description": "<ul><li>Mental and physical performance enhancer.<\/li><li>Experience increased vitality and endurance with Shilajit’s potential performance-enhancing properties.<\/li><li>Natural adaptogenic effects without burn out.<\/li><\/ul>",
+            "benefit_block_svg": "<svg aria-hidden=\"true\" class=\"e-font-icon-svg e-fas-leaf\" viewbox=\"0 0 576 512\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\"><path d=\"M546.2 9.7c-5.6-12.5-21.6-13-28.3-1.2C486.9 62.4 431.4 96 368 96h-80C182 96 96 182 96 288c0 7 .8 13.7 1.5 20.5C161.3 262.8 253.4 224 384 224c8.8 0 16 7.2 16 16s-7.2 16-16 16C132.6 256 26 410.1 2.4 468c-6.6 16.3 1.2 34.9 17.5 41.6 16.4 6.8 35-1.1 41.8-17.3 1.5-3.6 20.9-47.9 71.9-90.6 32.4 43.9 94 85.8 174.9 77.2C465.5 467.5 576 326.7 576 154.3c0-50.2-10.8-102.2-29.8-144.6z\"><\/path><\/svg>",
+            "benefit_block_svg_1": "shopify:\/\/shop_images\/boost_your_energy_with_shilajit.png"
+          }
+        },
+        "benefit_blocks_Teq7TJ": {
+          "type": "benefit-blocks",
+          "settings": {
+            "benefit_block_title": "Support weight management",
+            "benefit_block_description": "<ul><li>Suppresses increased or excessive appetite.<\/li><li>Shilajit may aid in weight management by supporting energy levels. <\/li><li>Helps build muscle for increased fat burning.<\/li><\/ul>",
+            "benefit_block_svg": "<svg aria-hidden=\"true\" class=\"e-font-icon-svg e-fas-weight\" viewbox=\"0 0 512 512\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\"><path d=\"M448 64h-25.98C438.44 92.28 448 125.01 448 160c0 105.87-86.13 192-192 192S64 265.87 64 160c0-34.99 9.56-67.72 25.98-96H64C28.71 64 0 92.71 0 128v320c0 35.29 28.71 64 64 64h384c35.29 0 64-28.71 64-64V128c0-35.29-28.71-64-64-64zM256 320c88.37 0 160-71.63 160-160S344.37 0 256 0 96 71.63 96 160s71.63 160 160 160zm-.3-151.94l33.58-78.36c3.5-8.17 12.94-11.92 21.03-8.41 8.12 3.48 11.88 12.89 8.41 21l-33.67 78.55C291.73 188 296 197.45 296 208c0 22.09-17.91 40-40 40s-40-17.91-40-40c0-21.98 17.76-39.77 39.7-39.94z\"><\/path><\/svg>",
+            "benefit_block_svg_1": "shopify:\/\/shop_images\/drop_your_weight_with_shilajit.png"
+          }
+        },
+        "benefit_blocks_dhB8xP": {
+          "type": "benefit-blocks",
+          "settings": {
+            "benefit_block_title": "Improve sleep quality",
+            "benefit_block_description": "<ul><li>Optimizes sleep cycles and alertness while wake.<\/li><li>Enjoy restful nights and wake up refreshed with Shilajit.<\/li><li>Rapidly diminishes jetlag.<\/li><\/ul>",
+            "benefit_block_svg": "<svg aria-hidden=\"true\" class=\"e-font-icon-svg e-fas-bed\" viewbox=\"0 0 640 512\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\"><path d=\"M176 256c44.11 0 80-35.89 80-80s-35.89-80-80-80-80 35.89-80 80 35.89 80 80 80zm352-128H304c-8.84 0-16 7.16-16 16v144H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v352c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16v-48h512v48c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V240c0-61.86-50.14-112-112-112z\"><\/path><\/svg>",
+            "benefit_block_svg_1": "shopify:\/\/shop_images\/shilajit_sleep_better.png"
+          }
+        },
+        "benefit_blocks_QXQCiw": {
+          "type": "benefit-blocks",
+          "settings": {
+            "benefit_block_title": "Glow Your Skin",
+            "benefit_block_description": "<ul><li>Slow down your aging process <\/li><li>It is also a source of antioxidants and anti-inflammatory properties that aid the repair of cell damage and limit the deterioration of the body due to age<\/li><\/ul>",
+            "benefit_block_svg": "",
+            "benefit_block_svg_1": "shopify:\/\/shop_images\/glow_your_skin.png"
+          }
+        },
+        "benefit_blocks_UnjwUz": {
+          "type": "benefit-blocks",
+          "settings": {
+            "benefit_block_title": "Strengthens immune system",
+            "benefit_block_description": "<ul><li>Optimizing a healthy response to inflammation.<\/li><li>Shilajit’s antioxidant properties may contribute to a robust immune response.<\/li><li>Rapidly delivers rare minerals, metabolites, and antioxidants to all cells<\/li><\/ul>",
+            "benefit_block_svg": "",
+            "benefit_block_svg_1": "shopify:\/\/shop_images\/improve_your_heart_health.png"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_blocks_4XNHU9",
+        "benefit_blocks_Teq7TJ",
+        "benefit_blocks_dhB8xP",
+        "benefit_blocks_QXQCiw",
+        "benefit_blocks_UnjwUz"
+      ],
+      "settings": {
+        "benefits_title": "Benefits of Sundried Himalayan Shilajit",
+        "benefits_description": "<p> PakShilajit finetunes your body to its maximum potential. PakShilajit PK benefits exceed and outperform any conventional shilajit ever made. <\/p>"
+      }
+    },
+    "pak_shilajit_block_BrxhLE": {
+      "type": "pak-shilajit-block",
+      "blocks": {
+        "block_BwpKXN": {
+          "type": "block",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/ethicaly_sourced.jpg",
+            "block_title": "ETHICALLY SOURCED",
+            "block_text": "We partner with local Himalayan communities to harvest pure shilajit."
+          }
+        },
+        "block_hEKa4B": {
+          "type": "block",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/gold_graded_shilajit.png",
+            "block_title": "HARVESTED AT THE PEAK",
+            "block_text": "Collected from 17,000 ft above the Himalayas to retain its powerful form."
+          }
+        },
+        "block_qMNPCp": {
+          "type": "block",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/sundried_pakshilajit.png",
+            "block_title": "LONG SUN-DRIED PROCESS",
+            "block_text": "Our Shilajit undergoes traditional filtering & purification process to retain potency."
+          }
+        },
+        "second_block_6Ny4xR": {
+          "type": "second_block",
+          "settings": {
+            "block_image_second": "shopify:\/\/shop_images\/lab_tested_shilajit.png",
+            "block_title_second": "THIRD-PARTY LAB TESTED",
+            "block_text_second": "Verified by US labs to guarantee purity and safety."
+          }
+        },
+        "second_block_q6mK3L": {
+          "type": "second_block",
+          "settings": {
+            "block_image_second": "shopify:\/\/shop_images\/Best_Filtration_Shilajit.png",
+            "block_title_second": "METICULOUSLY PURIFIED",
+            "block_text_second": "Every product passes a rigorous purification process to remove contaminants like mercury and lead."
+          }
+        },
+        "second_block_mBmMPz": {
+          "type": "second_block",
+          "settings": {
+            "block_image_second": "shopify:\/\/shop_images\/money_back.png",
+            "block_title_second": "100% MONEY-BACK GUARANTEE",
+            "block_text_second": "If you're not satisfied with your purchase, we're happy to hear your concerns and process refunds."
+          }
+        }
+      },
+      "block_order": [
+        "block_BwpKXN",
+        "block_hEKa4B",
+        "block_qMNPCp",
+        "second_block_6Ny4xR",
+        "second_block_q6mK3L",
+        "second_block_mBmMPz"
+      ],
+      "settings": {
+        "change_styling": "default_styling",
+        "title": "PakShilajit Is The #1 Choice",
+        "button": "Shop Now",
+        "back_image": "shopify:\/\/shop_images\/why_you_choose_pakshilajit_Desktop_Banner.jpg",
+        "back_image_two": "shopify:\/\/shop_images\/why_you_choose_pakshilajit_mobile_version_-latest.jpg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "text_with_icon_DAgRdd",
+    "custom_lab_test_RKKbWD",
+    "review_slider_WEQjM6",
+    "lab_test_section_iUVHNb",
+    "video_zVehYp",
+    "health_benefits_iBXLGg",
+    "benefits_section_rdz78Y",
+    "pak_shilajit_block_BrxhLE"
+  ]
+}

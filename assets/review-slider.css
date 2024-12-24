@@ -1,0 +1,91 @@
+.review-slider.main-container {
+    background-color: #000;
+}
+.review-slider.main-container .page-width {
+    margin: 0 auto;
+}
+
+.review-slider .container{
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    justify-content: center;
+
+}
+.review-slider .container .text-section {
+    max-width: 1000px;
+    text-align: center;
+}
+.review-slider .container .heading {
+    text-transform:uppercase;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.3em;
+}
+.review-slider *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.review-slider .container .text-section .text {
+    margin-bottom: 1.6em;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Montserrat,sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.6em;
+
+  
+}
+.review-slider .swiper-slide img {
+  /* max-width: 300px; */
+  width: 100%;
+}
+.review-slider .swiper-container {
+  width: 100%;
+  overflow: hidden  ;
+}
+.review-slider .stars .star {
+    width: 30px;
+    height: 25px;
+    fill: #f0ad4e;
+}
+.review-slider .stars {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.6rem;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.review-slider .extra__layer {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.review-slider .extra__layer .swiper-button-prev , 
+.review-slider .extra__layer .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.review-slider div:empty {
+    display: block;
+}
+@media screen and (max-width:767px) {
+    .review-slider .container .heading {
+        font-size: 18px;
+    }
+    .review-slider .container .text-section .text {
+        font-size: 16px;
+    }
+}

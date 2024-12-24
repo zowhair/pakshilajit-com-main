@@ -1,0 +1,140 @@
+.hb_contact_form .hb_contact_form-image {
+    max-width: 100%;
+}
+.hb_contact_form img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.hb_contact_form .main_title {
+    font-family: "Gotham", sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #000000;
+    margin: 0 0 15px;
+}
+.hb_contact_form .description {
+    font-family: "Gotham", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #000000;
+    display: block;
+}
+.hb_contact_form .hb_contact_form-banner {
+    position: relative;
+}
+.hb_contact_form .hb_contact_form-grid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+.hb_contact_form .hb_contact_form-grid .page-width {
+    width: 100%;
+}
+.hb_contact_form .contact-form-header {
+    margin: 0 0 20px;
+}
+.hb_contact_form .contact-form-title {
+    font-family: "Gotham", sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #000000;
+    margin: 0;
+    text-align: center;
+}
+.hb_contact_form .hb_contact-bottom-sec {
+    padding: 50px 0;
+}
+.hb_contact_form .hb_contact-bottom-sec .contact__fields {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    grid-gap: 20px;
+}
+.hb_contact_form .hb_contact-bottom-sec .form-col {
+    flex: 1;
+}
+.hb_contact_form .hb_contact-bottom-sec .cus_field-input:focus,
+.hb_contact_form .hb_contact-bottom-sec .cus_field-input:focus-visible {
+    box-shadow: none;
+    outline: none;
+}
+.hb_contact_form .hb_contact-bottom-sec .cus_field-input[type="text"]::placeholder,
+.hb_contact_form .hb_contact-bottom-sec .cus_field-input {
+    border: 2px solid #000;
+    border-radius: 4px;
+    color: #000 ;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0;
+    padding: 15px;
+    width: 100%;
+}
+.hb_contact_form .hb_contact-bottom-sec .cus_field-input[type="text"]::placeholder {
+    padding: 0;
+    border: none;
+}
+.hb_contact_form .hb_contact-bottom-sec .contact__button {
+    margin-top: 20px;
+}
+.hb_contact_form .hb_contact-bottom-sec .button {
+    width: 100%;
+    transition: all ease-in-out .2s;
+    margin-top: 0;
+    border-radius: 4px;
+    font-family: "Gotham",sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: .32px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #000;
+    color: #f1b51e;
+    cursor: pointer;
+}
+
+@media screen and (max-width:767px) {
+    .hb_contact_form .main_title {
+        font-size: 28px;
+        margin: 0 0 10px;
+    }
+    .hb_contact_form .contact-form-title {
+        font-size: 28px;
+    }
+    .hb_contact_form .contact-form-header {
+        margin: 0 0 15px;
+    }
+    .hb_contact_form .description {
+        font-size: 12px;
+    }
+    .hb_contact_form .hb_contact-bottom-sec {
+        padding: 20px 0;
+    }
+    .hb_contact_form .hb_contact-bottom-sec .contact__fields {
+        display: block;
+    }
+    .hb_contact_form .hb_contact-bottom-sec .contact__fields .form-col:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    .hb_contact_form .hb_contact-bottom-sec .contact__button {
+        margin-top: 15px;
+    }
+    .hb_contact_form .hb_contact-bottom-sec .button {
+        font-size: 14px;
+    }
+    .hb_contact_form .hb_contact-bottom-sec .cus_field-input[type=text]::placeholder,
+    .hb_contact_form .hb_contact-bottom-sec .cus_field-input {
+        font-size: 14px;
+        padding: 10px;
+    }    
+}

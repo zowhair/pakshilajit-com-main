@@ -1,0 +1,201 @@
+
+.image-with-richtext .page-width{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-inline: 30px;
+}
+.image-with-richtext img {
+    width: 100%;
+    height: 100%;
+}
+.image-with-richtext {
+    margin-bottom: 80px;
+    padding-top: 30px;
+}
+.image-with-richtext .title {
+    font-size: 52px;
+    font-family: amiri;
+    font-weight: 700;
+    line-height: 1;
+    overflow-wrap: break-word;
+    margin: 0 0 50px;
+    text-align: center;
+    letter-spacing: 0px;
+    text-transform: capitalize;
+}
+.image-with-richtext .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.image-with-richtext .image_gallery {
+    max-width: 670px;
+    flex: 670px;
+    margin-right: 20px;
+    aspect-ratio: 1 / 1;
+}
+.image-with-richtext .richtext_content {
+    max-width: 670px;
+    flex: 670px;
+}
+.image-with-richtext .richtext_wrapper {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.image-with-richtext .richtext_wrapper:not(:last-child) {
+    margin: 0 0 24px;
+}
+.image-with-richtext .richtext_image {
+    max-width: 80px;
+    min-width: 80px;
+    flex: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 16px;
+}
+.image-with-richtext .content {
+    max-width: 574px;
+    flex: 574px;
+}
+.image-with-richtext .content_title {
+    color: #000000FF;
+    font-size: 40px;
+    font-family: amiri;
+    font-weight: 700;
+    line-height: 1.05;
+    overflow-wrap: break-word;
+    margin: 0 0 8px;
+    letter-spacing: 0px;
+}
+.image-with-richtext .content_description {
+    font-size: 24px;
+    font-family: helvetica;
+    line-height: 1.3334;
+    overflow-wrap: break-word;
+    letter-spacing: 0.6px;
+}
+.image-with-richtext .content_description p {
+    margin: 0;
+}
+.image-with-richtext .content_description>p:not(:last-child) {
+    margin: 0 0 10px;
+}
+@media screen and (max-width:1400px) {
+    .image-with-richtext .content {
+        max-width: 500px;
+        flex: 500px;
+    }
+    .image-with-richtext .content_description {
+        font-size: 21px;
+    }
+    .image-with-richtext .richtext_image {
+        max-width: 70px;
+        min-width: 70px;
+        flex: 70px;
+        height: 70px;
+        margin-right: 15px;
+    }
+    .image-with-richtext .title {
+        font-size: 50px;
+    }
+}
+@media screen and (max-width:1289px) {
+    .image-with-richtext .image_gallery {
+        margin-right: 10px;
+    }
+    .image-with-richtext .content_description {
+        font-size: 16px;
+    }
+    .image-with-richtext .content {
+        max-width: 355px;
+        flex: 355px;
+    }
+    .image-with-richtext .content_title {
+        font-size: 36px;
+    }
+    .image-with-richtext .richtext_wrapper:not(:last-child) {
+        margin: 0 0 15px;
+    }
+}
+@media screen and (max-width:990px) {
+    .image-with-richtext .title {
+        font-size: 44px;
+    }
+    .image-with-richtext .image_gallery {
+        margin-right: 8px;
+    }
+    .image-with-richtext .content_title {
+        font-size: 24px;
+        margin: 0 0 6px;
+    }
+    .image-with-richtext .content_description {
+        font-size: 12px;
+    }
+    .image-with-richtext .richtext_image {
+        max-width: 50px;
+        min-width: 50px;
+        flex: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    .image-with-richtext .content {
+        max-width: 290px;
+        flex: 290px;
+    }
+}
+@media screen and (max-width:767px) {
+    .image-with-richtext {
+        margin-bottom: 48px;
+    }
+    .image-with-richtext .page-width {
+        padding: 0 24px;
+    }
+    .image-with-richtext .wrapper {
+        flex-direction: column;
+    }
+    .image-with-richtext .image_gallery {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 0 40px;
+        flex: unset;
+    }
+    .image-with-richtext .title {
+        font-size: 32px;
+        margin: 0 0 40px;
+    }
+    .image-with-richtext .richtext_content {
+        max-width: 100%;
+        width: 100%;
+        flex: unset;
+    }
+    .image-with-richtext .richtext_wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .image-with-richtext .richtext_wrapper:not(:last-child) {
+        margin: 0 0 24px;
+    }
+    .image-with-richtext .richtext_image {
+        max-width: 80px;
+        min-width: 80px;
+        flex: unset;
+        height: 80px;
+        margin: 0 0 16px;
+    }
+    .image-with-richtext .content {
+        max-width: 100%;
+        flex: unset;
+    }
+    .image-with-richtext .content_title {
+        font-size: 28px;
+        text-align: center;
+        margin: 0;
+    }
+    .image-with-richtext .content_description {
+        font-size: 16px;
+        text-align: center;
+    }
+}

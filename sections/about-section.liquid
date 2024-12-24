@@ -1,0 +1,45 @@
+{{ 'about-section.css' |  asset_url |  stylesheet_tag }}
+<div class="about_section">
+    <div class="page-width">
+        <div class="about_section__wrapper">
+            <div class="about_section__main--wrapper">
+                {%- if section.settings.title != blank -%}
+                    <h2 class="about_section__title">{{ section.settings.title }}</h2>
+                {%- endif -%}
+                {%- if section.settings.text != blank -%}
+                    <p class="about_section__text">{{ section.settings.text }}</p>
+                {%- endif -%}
+                {%- if section.settings.button != blank -%}
+                    <a href="" class="about_section__button">{{ section.settings.button }}</a>
+                {%- endif -%}
+            </div>
+        </div>
+    </div>
+</div>
+{% schema %}
+  {
+    "name": "About Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "button",
+        "label": "Button"
+      }
+    ],
+    "presets": [
+      {
+        "name": "About Section"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,223 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_mnXhUy": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_TViJmy": {
+          "type": "heading",
+          "settings": {
+            "heading": "How Sundried-Shilajit Process Shilajit",
+            "heading_size": "h1"
+          }
+        },
+        "text_rcjf3f": {
+          "type": "text",
+          "settings": {
+            "text": "<p>How we process and ready the shilajit through the sundried process (Highest quality Himalayan Shilajit).<\/p><p>It takes us 60 to 75days to ready the shilajit. many companies in market-ready shilajit like in 5 days or less. <\/p><p>But you wanna know why we take that much time to ready shilajit one time.<\/p><p>Our Process of making shilajit and maintaining the best quality is given below. <\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_ekpgzG": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_TViJmy",
+        "text_rcjf3f",
+        "button_ekpgzG"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/founder.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "lab-test-doc": {
+      "type": "lab-test-doc",
+      "disabled": true,
+      "settings": {
+        "title": "PakShilajit Quality Process & Lab Reports",
+        "text": "PakShilajit Quality Test Report From USA, UK, UAE and Pakistan",
+        "image": "shopify:\/\/shop_images\/lab_tested_images_shilajit.jpg"
+      }
+    },
+    "about-block": {
+      "type": "about-block",
+      "blocks": {
+        "block_QgXAUe": {
+          "type": "block",
+          "settings": {
+            "check_box": false,
+            "title": "Collecting Raw Shilajit",
+            "content": "Collecting raw shilajit is the main, basic, and important thing. Many countries and many points in the world for collecting shilajit. Like Himalaya, Alti, etc.  The shilajit we get from the highest altitude is the most potent raw shilajit. Shilajit which gets from the Alti mountains is getting from almost 13000ft. But the Shilajit get from the Himalayan Mountains get from 14000ft to 18000ft. The raw material which gets from the highest point is called Gold Graded Shilajit. <br><br> We Collect our shilajit from Himalayas Mountains Pakistan (GB). its also known as the highest mountains area. we make sure that the shilajit we get is the highest point. so we have our own shilajit hunter who lives in mountains most of the month in the year and searching for the shilajit. Our shilajit is mostly from above 16000ft to 18000ft. So our shilajit is Gold Graded Shilajit."
+          }
+        },
+        "block_R7yVRw": {
+          "type": "block",
+          "settings": {
+            "check_box": true,
+            "title": "Filtration Process",
+            "content": "Our Filtration process takes almost 30 days. First, the shilajit gets from mountains in the form of big stones as shown in the image above. we have crushed them and made the small stones. <br><br>We use the traditional methods of purification and processing to preserve its quality better than any sophisticated machinery.<br><br>The water we use the Labtested and the spring water from the mountains of Abbottabad. and after collecting the water do the water filtration and biol the water also after boiling put in the raw form mix. then do the filtration process 2 times a day some days do 1 time a day for the 15days.<br><br>after the filtration process, we make sure that there are no impurities in the shilajit liquid."
+          }
+        },
+        "block_HmAV4e": {
+          "type": "block",
+          "settings": {
+            "check_box": false,
+            "title": "How We Dried Shilajit?",
+            "content": "Most companies in the market dried the shilajit in just 1 to 2 days using the fire dried. From this method, lots of minerals in the shilajit are lost and quality does not remain excellent. <br><br>Our dried process takes almost 30days to dry shilajit and make resin. but it also depends on the weather. <br><br>We use the sundried process to dried the shilajit. we have the process Glass Containers in which small stainless steel container for the liquid. The Glass container is properly secure from dust and any pollution. <br><br>And In which area you do this sundried process is also most important. because in cities lots of pollution. we are based in Abbottabad Pakistan and make in the Hilly area no population in this area and no pollution fresh air with lots of trees. its area is 12KM west of Shimla Hill Abbottabad."
+          }
+        },
+        "block_t3hfaP": {
+          "type": "block",
+          "settings": {
+            "check_box": true,
+            "title": "Packing Of Shilajit",
+            "content": "Packing of Shilajit is also the main thing Like all other processes. If you are packing and shipping shilajit in plastic jars it’s not good. because in shipping parcel may put in may hot area so where the using plastic is not good. our shilajit is properly packed and we use food-grade Glass jars. we also have the measuring spoon added to the shilajit.  and propper how to use method is also mentioned in the box.Don’t worry we are ready Best shilajit for you. Pakshilajit is there for you.High-quality,  Authentic, Labtested Shilajit for you. check lab reports below."
+          }
+        }
+      },
+      "block_order": [
+        "block_QgXAUe",
+        "block_R7yVRw",
+        "block_HmAV4e",
+        "block_t3hfaP"
+      ],
+      "settings": {}
+    },
+    "lab-test-info": {
+      "type": "lab-test-info",
+      "blocks": {
+        "test_info_NAVqNq": {
+          "type": "test_info",
+          "settings": {
+            "info_item_title": "Collecting Raw Shilajit",
+            "info_item_text": "<p>Collecting raw shilajit is the main, basic, and important thing. Many countries and many points in the world for collecting shilajit. Like Himalaya, Alti, etc.  The shilajit we get from the highest altitude is the most potent raw shilajit. Shilajit which gets from the Alti mountains is getting from almost 13000ft. But the Shilajit get from the Himalayan Mountains get from 14000ft to 18000ft. The raw material which gets from the highest point is called Gold Graded Shilajit. We Collect our shilajit from Himalayas Mountains Pakistan (GB). its also known as the highest mountains area. we make sure that the shilajit we get is the highest point. so we have our own shilajit hunter who lives in mountains most of the month in the year and searching for the shilajit. Our shilajit is mostly from above 16000ft to 18000ft. So our shilajit is Gold Graded Shilajit.<\/p>"
+          }
+        },
+        "test_info_UrqqCm": {
+          "type": "test_info",
+          "settings": {
+            "info_item_title": "Filtration Process",
+            "info_item_text": "<p>Our Filtration process takes almost 30 days. First, the shilajit gets from mountains in the form of big stones as shown in the image above. we have crushed them and made the small stones. We use the traditional methods of purification and processing to preserve its quality better than any sophisticated machinery. The water we use the Labtested and the spring water from the mountains of Abbottabad. and after collecting the water do the water filtration and boil the water also after boiling put in the raw form mix. then do the filtration process 2 times a day some days do 1 time a day for the 15days. after the filtration process, we make sure that there are no impurities in the shilajit liquid.<\/p>"
+          }
+        },
+        "test_info_AqC8Xt": {
+          "type": "test_info",
+          "settings": {
+            "info_item_title": "THow We Dried Shilajit",
+            "info_item_text": "<p>Most companies in the market dried the shilajit in just 1 to 2 days using the fire dried. From this method, lots of minerals in the shilajit are lost and quality does not remain excellent. Our dried process takes almost 30days to dry shilajit and make resin. but it also depends on the weather. We use the sundried process to dried the shilajit. we have the process Glass Containers in which small stainless steel container for the liquid. The Glass container is properly secure from dust and any pollution. And In which area you do this sundried process is also most important. because in cities lots of pollution. we are based in Abbottabad Pakistan and make in the Hilly area no population in this area and no pollution fresh air with lots of trees. its area is 12KM west of Shimla Hill Abbottabad.<\/p>"
+          }
+        },
+        "test_info_8FPiLd": {
+          "type": "test_info",
+          "settings": {
+            "info_item_title": "Packing Of Shilajit",
+            "info_item_text": "<p>Packing of Shilajit is also the main thing Like all other processes. If you are packing and shipping shilajit in plastic jars it’s not good. because in shipping parcel may put in may hot area so where the using plastic is not good. our shilajit is properly packed and we use food-grade Glass jars. we also have the measuring spoon added to the shilajit.  and propper how to use method is also mentioned in the box.Don’t worry we are ready Best shilajit for you. Pakshilajit is there for you.High-quality,  Authentic, Labtested Shilajit for you. check lab reports below. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "test_info_NAVqNq",
+        "test_info_UrqqCm",
+        "test_info_AqC8Xt",
+        "test_info_8FPiLd"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Four Main Things To Ready The Best Shilajit",
+        "text": "There are four main things to ready the best shilajit Like Pakshilajit"
+      }
+    },
+    "lab_test_section_3jGNaM": {
+      "type": "lab-test-section",
+      "blocks": {
+        "slider_block_JXbEhC": {
+          "type": "slider-block",
+          "settings": {
+            "slider_block_title": "Filtration Process",
+            "slider_block_description": "We use traditional methods of the purification Filtration process for 30 days. We Do strict eyes on Filtration."
+          }
+        },
+        "slider_block_JCpr3E": {
+          "type": "slider-block",
+          "settings": {
+            "slider_block_title": "SunDried Process",
+            "slider_block_description": "We Only Use Sundried Process to Dried the Shilajit. which takes almost 45 days to dried shilajit."
+          }
+        },
+        "slider_block_dpGANY": {
+          "type": "slider-block",
+          "settings": {
+            "slider_block_title": "Quality of Raw Material",
+            "slider_block_description": "We only collect the raw materials above 17000ft Gold Graded quality From Himalayan Mountains"
+          }
+        },
+        "tabs_data_WR4iDA": {
+          "type": "tabs-data",
+          "settings": {
+            "tabs_title": "USA Report",
+            "tab_content": "shopify:\/\/shop_images\/shilajit-lab-report-usa.webp"
+          }
+        },
+        "tabs_data_rBdw4p": {
+          "type": "tabs-data",
+          "settings": {
+            "tabs_title": "EuroFin Report",
+            "tab_content": "shopify:\/\/shop_images\/shilajit-lab-report-pakshilajit-eurofin.webp"
+          }
+        },
+        "tabs_data_wdUNg4": {
+          "type": "tabs-data",
+          "settings": {
+            "tabs_title": "UAE Report",
+            "tab_content": "shopify:\/\/shop_images\/uae-lab-report.uae.webp"
+          }
+        }
+      },
+      "block_order": [
+        "slider_block_JXbEhC",
+        "slider_block_JCpr3E",
+        "slider_block_dpGANY",
+        "tabs_data_WR4iDA",
+        "tabs_data_rBdw4p",
+        "tabs_data_wdUNg4"
+      ],
+      "settings": {
+        "section_title": "Pakistan First Lab Tested Shilajit Brand",
+        "secondary_title": "Rigorously Lab-Tested in the UAE, USA, AUS, Pakistan",
+        "secondary_description": "<p>PakShilajit products undergo rigorous third-party lab testing in the USA, UAE, AUS, Pakistan to ensure purity, potency, and safety. PakShilajit resin lab results show it contains 71% fulvic & humic acid with 12x more antioxidants than other shilajit resin in the market.<\/p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_mnXhUy",
+    "lab-test-doc",
+    "about-block",
+    "lab-test-info",
+    "lab_test_section_3jGNaM"
+  ]
+}

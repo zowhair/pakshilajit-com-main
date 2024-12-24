@@ -1,0 +1,281 @@
+
+ {
+  "sections": {
+    "custom-banner": {
+      "type": "custom-banner",
+      "settings": {
+        "image": "shopify://shop_images/Himalayan_Shilajit_Pakshilajit_Banner_height_450.jpg",
+        "mobile_image": "shopify://shop_images/banner_image_for_mobile_shilajit.jpg",
+        "title": "Sundried Premium Himalayan Shilajit",
+        "text": "<p>World Most Premium Sundried Himalayan Shilajit Above 17000FT From Himalayan Mountains. with 45 days of sundried process. </p>",
+        "button_url": "shopify://collections/all",
+        "button_text": "Contact Us"
+      }
+    },
+    "rich_text_eWfpWJ": {
+      "type": "rich-text",
+      "blocks": {
+        "text_iBmrhF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_iBmrhF"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "hb_image_width_text_TNbkpX": {
+      "type": "hb-image-width-text",
+      "blocks": {
+        "content_JD74my": {
+          "type": "Content",
+          "settings": {
+            "hb_image_width_text_title": "",
+            "hb_image_width_text_description": "<p>Our commitment to excellence is not just a claim — it's backed by 5 <strong>US patents</strong> and a legacy of transforming health and well-being. With <strong>12 years in the industry</strong> and <strong>hundreds of validated 5-star reviews</strong>, we're not just a choice... we're your best investment.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_JD74my"
+      ],
+      "settings": {
+        "bannner_image": "shopify://shop_images/founder.webp",
+        "hb_image_width_text_main_title": "",
+        "style": "style_primary"
+      }
+    },
+    "hb_icon_with_text_gHYRrp": {
+      "type": "hb-icon-with-text",
+      "blocks": {
+        "image_MVLBMT": {
+          "type": "image",
+          "settings": {
+            "hb_icon_with_text_image": "shopify://shop_images/thrive-market.png"
+          }
+        },
+        "image_X8n9xn": {
+          "type": "image",
+          "settings": {
+            "hb_icon_with_text_image": "shopify://shop_images/the-vitamin-shoppe_e5bbe5a2-86a1-49a7-b95f-1917efa247fa.png"
+          }
+        },
+        "image_NhTFG9": {
+          "type": "image",
+          "settings": {
+            "hb_icon_with_text_image": "shopify://shop_images/erewhon_1.webp"
+          }
+        },
+        "image_mFVBnK": {
+          "type": "image",
+          "settings": {
+            "hb_icon_with_text_image": "shopify://shop_images/thrive-market.png"
+          }
+        },
+        "image_dcdURJ": {
+          "type": "image",
+          "settings": {
+            "hb_icon_with_text_image": "shopify://shop_images/the-vitamin-shoppe_e5bbe5a2-86a1-49a7-b95f-1917efa247fa.png"
+          }
+        },
+        "image_iXnk3f": {
+          "type": "image",
+          "settings": {
+            "hb_icon_with_text_image": "shopify://shop_images/cymbiotika_1.webp"
+          }
+        }
+      },
+      "block_order": [
+        "image_MVLBMT",
+        "image_X8n9xn",
+        "image_NhTFG9",
+        "image_mFVBnK",
+        "image_dcdURJ",
+        "image_iXnk3f"
+      ],
+      "settings": {
+        "hb_icon_with_text": "We are proud to white label for upmarket grocery chain Erewhon and online supplement store Cymbiotika, and our products are distributed in leading retailers including Vitamin Shoppe, Thrive Market, Lazy Acres and JOJO Markets."
+      }
+    },
+    "hb_image_width_text_tJ7Qii": {
+      "type": "hb-image-width-text",
+      "blocks": {
+        "content_FpWE6R": {
+          "type": "Content",
+          "settings": {
+            "hb_image_width_text_title": "Exclusive patented products",
+            "hb_image_width_text_description": "<p>Our lines include shilajit Live Resin®, White Rabbit® (shilajit enhanced with subtle flavors and aromas), Pepts® (short-form peptides), Coated Silver® (colloidal silver), Epitalon sublingual spray and Cerepotim nootropics which are formulated in our factory to guarantee unmatched quality.</p>"
+          }
+        },
+        "content_PQHGVX": {
+          "type": "Content",
+          "settings": {
+            "hb_image_width_text_title": "Shilajit's rich legacy and modern popularity",
+            "hb_image_width_text_description": "<p>Shilajit, a cornerstone of Ayurvedic medicine, is revered for its over 85 minerals and trace elements. Known for enhancing brain function, immune support, heart health, and providing anti-aging benefits, shilajit's popularity has skyrocketed with a 1,000% increase in Google searches over the past 12 months. Pürblack's revolutionary Live Resin® shilajit sets a new standard by eliminating harmful impurities found in other brands, offering a safe and effective product your customers will trust and rely on.</p>"
+          }
+        },
+        "content_TEG3yT": {
+          "type": "Content",
+          "settings": {
+            "hb_image_width_text_title": "Innovative and high-demand products",
+            "hb_image_width_text_description": "<p>White Rabbit® is the world's most advanced shilajit, enriched with essential oils like wild grapefruit, orange, and ginger, ensuring a unique and enjoyable experience. With peptides experiencing a 50% increase in Google search volume over the past year, our Pepts® offer cutting-edge benefits that meet consumer demand. Additionally, our Coated Silver® is backed by studies from the United States Defense Threat Reduction Agency (USDTRA), offering unparalleled immune support.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_FpWE6R",
+        "content_PQHGVX",
+        "content_TEG3yT"
+      ],
+      "settings": {
+        "bannner_image": "shopify://shop_images/founder.webp",
+        "hb_image_width_text_main_title": "Why choose Pürblack® for your store?",
+        "style": "style_normal"
+      }
+    },
+    "hb-image-width-text": {
+      "type": "hb-image-width-text",
+      "blocks": {
+        "content_8mkNcr": {
+          "type": "Content",
+          "settings": {
+            "hb_image_width_text_title": "A profitable partnership",
+            "hb_image_width_text_description": "<p>Choosing Pürblack® means investing in products that customers will purchase repeatedly. Our dedication to purity, effectiveness, and innovation ensures that our supplements are not just beneficial for health, but also offer significant potential for profit when purchased wholesale.</p>"
+          }
+        },
+        "content_XDxVUU": {
+          "type": "Content",
+          "settings": {
+            "hb_image_width_text_title": "Flexible business solutions",
+            "hb_image_width_text_description": "<p>We understand the diverse needs of our partners, which is why we're open to both wholesale orders and white-labeling opportunities for our Shilajit Resin® products. Whether you're looking to expand your existing supplement line or start something new, Pürblack® is here to support your business goals with high-quality, scientifically-backed products.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_8mkNcr",
+        "content_XDxVUU"
+      ],
+      "settings": {
+        "bannner_image": "shopify://shop_images/purblack-jar.jpg",
+        "hb_image_width_text_main_title": "",
+        "style": "style_secondary"
+      }
+    },
+    "hb_image_width_text_d3q9Hw": {
+      "type": "hb-image-width-text",
+      "blocks": {
+        "content_4i8rft": {
+          "type": "Content",
+          "settings": {
+            "hb_image_width_text_title": "Join us in promoting health and well-being",
+            "hb_image_width_text_description": "<p>With Pürblack®, you're not just stocking your store with supplements; you're offering a gateway to improved health, vitality, and wellness. Our products stand out on the shelves, promising not only to meet but exceed your customers' expectations. Invest in Pürblack® today and be part of a growing movement towards a healthier tomorrow.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_4i8rft"
+      ],
+      "settings": {
+        "bannner_image": "shopify://shop_images/purblack-jar-rock-bg.jpg",
+        "hb_image_width_text_main_title": "",
+        "style": "style_tertiary"
+      }
+    },
+    "partner-form": {
+      "type": "partner-form",
+      "disabled": true,
+      "blocks": {
+        "checkbox_label_pdRnaX": {
+          "type": "checkbox_label",
+          "settings": {
+            "checkbox_label": "Pürblack"
+          }
+        },
+        "checkbox_label_pdRnaX1": {
+          "type": "checkbox_label",
+          "settings": {
+            "checkbox_label": "White Rabbit by Pürblack"
+          }
+        },
+        "checkbox_label_pdRnaX2": {
+          "type": "checkbox_label",
+          "settings": {
+            "checkbox_label": "Coated Silver"
+          }
+        },
+        "checkbox_label_pdRnaX3": {
+          "type": "checkbox_label",
+          "settings": {
+            "checkbox_label": "Pepts"
+          }
+        },
+        "checkbox_label_pdRnaX4": {
+          "type": "checkbox_label",
+          "settings": {
+            "checkbox_label": "Cerebroptim"
+          }
+        }
+      },
+      "block_order": [
+        "checkbox_label_pdRnaX",
+        "checkbox_label_pdRnaX1",
+        "checkbox_label_pdRnaX2",
+        "checkbox_label_pdRnaX3",
+        "checkbox_label_pdRnaX4"
+      ],
+      "settings": {
+        "title": "Become a Pürblack® partner now",
+        "description": "Contact us now to learn more about our wholesale and white-labeling opportunities. Let's embark on this profitable journey together.",
+        "sub_button": "Contact Us"
+      }
+    },
+    "1732182966283b5710": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_jznMUG": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "226829",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_jznMUG"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "custom-banner",
+    "rich_text_eWfpWJ",
+    "hb_image_width_text_TNbkpX",
+    "hb_icon_with_text_gHYRrp",
+    "hb_image_width_text_tJ7Qii",
+    "hb-image-width-text",
+    "hb_image_width_text_d3q9Hw",
+    "partner-form",
+    "1732182966283b5710"
+  ]
+}

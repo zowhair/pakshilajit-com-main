@@ -1,0 +1,212 @@
+.partner_form {
+    padding-bottom: 50px;
+}
+.partner_form .partner_form-wrapper {
+    display: flex;
+}
+.partner_form .partner_form-inputs-inner {
+    margin-bottom: 20px;
+}
+.partner_form .partner_form-inputs-inner .cus_field-input:not(:last-child) {
+    margin-bottom: 10px;
+}
+.partner_form .cus_field-input:focus,
+.partner_form .cus_field-input:focus-visible {
+    box-shadow: none;
+    outline: none;
+}
+.partner_form .cus_field-input[type="text"]::placeholder,
+.partner_form .cus_field-input {
+    border: 2px solid #000;
+    border-radius: 4px;
+    color: #000 ;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0;
+    padding: 15px;
+    width: 100%;
+}
+.partner_form .cus_field-input[type="text"]::placeholder {
+    padding: 0;
+    border: none;
+}
+.partner_form .partner_form-right-sec .form-button {
+    width: 100%;
+    margin-top: 0;
+    border-radius: 4px;
+    font-family: "Gotham", sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #000;
+    color: #f1b51e;
+    cursor: pointer;
+    padding: 20px;
+}
+.partner_form .form-text .partner_form-title { 
+    color: #000;
+    font-family: "Gotham", sans-serif;
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 1.2;
+    display: block;
+    margin: 0 0 10px;
+    padding: 0;
+}
+.partner_form .form-text .partner_form-description {
+    font-family: "Gotham", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 0;
+}
+.partner_form .checkbox-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 5px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.partner_form .checkbox-group .checkbox_label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.partner_form .checkbox_label .checkbox_label-checkbox[type=checkbox]:checked ~ .icon-tick {
+    visibility: visible;
+    opacity: 1;
+}
+.partner_form .cus_field-wrapper {
+    display: flex;
+    border: 2px solid #000;
+    border-radius: 4px;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+}
+.partner_form .cus_field-wrapper .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 2px;
+    width: 40%;
+    height: 250px;
+    overflow: auto;
+    z-index: 9;
+    border: 1px solid #000;
+}
+.partner_form .cus_field-wrapper .cus_field-input {
+    border: none;
+    padding: 0;
+    flex: 1;
+    padding-left: 10px;
+}
+.partner_form .custom-dropdown {
+    max-width: 90px;
+    flex: 90px;
+    cursor: pointer;
+}
+.partner_form .selected-country {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.partner_form .selected-country .icon-arrow {
+    width: 20px;
+    height: 20px;
+}
+.partner_form .checkbox_label-checkbox-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.partner_form .checkbox_label-checkbox-inner .icon-tick {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    visibility: hidden;
+    opacity: 0;
+}
+.partner_form .checkbox_label-checkbox-inner .icon-tick svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.partner_form .checkbox_label-checkbox[type=checkbox] {
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.partner_form .checkbox_label-text {
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0;
+    display: block;
+    padding-left: 5px;
+}
+.partner_form .cus_field-wrapper .dropdown-menu::-webkit-scrollbar {
+    width: 2px;
+}
+.partner_form .partner_form-content {
+    max-width: 40%;
+    flex: 40%;
+}
+.partner_form .partner_contact-form {
+    flex: 1;
+    padding-left: 20px;
+}
+@media screen and (max-width:767px) {
+    .partner_form {
+        padding-bottom: 20px;
+    }
+    .partner_form .form-text .partner_form-title {
+        font-size: 28px;
+    }
+    .partner_form .form-text .partner_form-description {
+        font-size: 14px;
+    }
+    .partner_form .partner_form-wrapper {
+        display: block;
+    }
+    .partner_form .partner_form-content {
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+    .partner_form .partner_contact-form {
+        padding-left: 0;
+    }
+    .partner_form .checkbox-group {
+        grid-gap: 2px;
+        margin-bottom: 10px;
+    }
+    .partner_form .checkbox_label-checkbox-inner {
+        width: 16px;
+        height: 16px;
+    }
+    .partner_form .checkbox_label-text {
+        font-size: 14px;
+        padding-left: 3px;
+    }
+    .partner_form .cus_field-wrapper .dropdown-menu {
+        width: 100%;
+    }
+}

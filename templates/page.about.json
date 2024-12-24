@@ -1,0 +1,54 @@
+{
+  "sections": {
+    "about-section": {
+      "type": "about-section",
+      "settings": {
+        "title": "About Us",
+        "text": "In a landscape of synthetic supplements, the inception of Pak Shilajit was motivated by a simple, yet fundamental belief in the nourishing power of nature. Our journey led us to the Himalayas, a region rich with ancient healing wisdom, where we discovered the foundation of our supplement, the powerful substance called Shilajit.",
+        "button": "learn more"
+      }
+    },
+    "about-block": {
+      "type": "about-block",
+      "blocks": {
+        "block_QgXAUe": {
+          "type": "block",
+          "settings": {
+            "check_box": false,
+            "image": "shopify:\/\/shop_images\/FCBEEBD5-37B4-4B82-9859-9AF06129D110.jpg",
+            "title": "Who is Pak Shilajit?",
+            "content": "We are a team deeply connected to the roots of Himalayan traditions. At Pak Shilajit, we proudly support the Himalayan communities by empowering local shilajit harvesters, a practice that stands central to our operations. Our process respects the age-old methods ingrained in the Himalayan culture; the harvested shilajit is meticulously filtered and dried over a span of three months to maintain its full potency, allowing us to offer a product that clearly stands a class apart in quality and efficacy. It's not just a supplement, it’s the embodiment of traditional wisdom and dedication, a difference that our customers can genuinely feel and trust."
+          }
+        },
+        "block_R7yVRw": {
+          "type": "block",
+          "settings": {
+            "check_box": true,
+            "image": "shopify:\/\/shop_images\/DAD053C1-96B4-4D2A-9310-5CF38BA97C38.jpg",
+            "title": "Who is Pak Shilajit?",
+            "content": "We are a team deeply connected to the roots of Himalayan traditions. At Pak Shilajit, we proudly support the Himalayan communities by empowering local shilajit harvesters, a practice that stands central to our operations. Our process respects the age-old methods ingrained in the Himalayan culture; the harvested shilajit is meticulously filtered and dried over a span of three months to maintain its full potency, allowing us to offer a product that clearly stands a class apart in quality and efficacy. It's not just a supplement, it’s the embodiment of traditional wisdom and dedication, a difference that our customers can genuinely feel and trust."
+          }
+        },
+        "block_HmAV4e": {
+          "type": "block",
+          "settings": {
+            "check_box": false,
+            "image": "shopify:\/\/shop_images\/E977D79F-82B1-4455-BA0A-CD7B73ED88EC.jpg",
+            "title": "Who is Pak Shilajit?",
+            "content": "We are a team deeply connected to the roots of Himalayan traditions. At Pak Shilajit, we proudly support the Himalayan communities by empowering local shilajit harvesters, a practice that stands central to our operations. Our process respects the age-old methods ingrained in the Himalayan culture; the harvested shilajit is meticulously filtered and dried over a span of three months to maintain its full potency, allowing us to offer a product that clearly stands a class apart in quality and efficacy. It's not just a supplement, it’s the embodiment of traditional wisdom and dedication, a difference that our customers can genuinely feel and trust."
+          }
+        }
+      },
+      "block_order": [
+        "block_QgXAUe",
+        "block_R7yVRw",
+        "block_HmAV4e"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "about-section",
+    "about-block"
+  ]
+}

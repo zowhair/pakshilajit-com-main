@@ -1,0 +1,17 @@
+:root {
+  --primary-main-fill: #FFFFFFFF;
+  --color-main-secondary:  #000000;
+  --color-fill-dark: #121212BF;
+  --color-fill-star: #F1B51E;
+  --color-fill-green: #4F7942;
+}
+.page-width {
+  max-width: 1440px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .page-width {
+    padding: 0 20px;
+  }
+}

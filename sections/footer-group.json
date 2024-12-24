@@ -1,0 +1,64 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "custom_footer_H8M6Fy": {
+      "type": "custom-footer",
+      "blocks": {
+        "menu_block_tp4KF7": {
+          "type": "menu_block",
+          "settings": {
+            "menu_title": "quick links",
+            "choose_link": "main-menu"
+          }
+        },
+        "content_block_V7CdfU": {
+          "type": "content_block",
+          "settings": {
+            "title": "contact us",
+            "contact_text": "<p><a href=\"mailto:support@pakshilajit.pk\" target=\"_blank\" title=\"mailto:support@pakshilajit.pk\">support@pakshilajit.pk<\/a><\/p><p><a href=\"tel:+923129552568\" target=\"_blank\" title=\"tel:+923129552568\">+923129552568<\/a><\/p>"
+          }
+        },
+        "block_EXFxhj": {
+          "type": "block",
+          "settings": {
+            "title": "FDA disclaimer",
+            "description": "<p>Statements made on this website have not been evaluated by the U.S. Food and Drug Administration. These products are not intended to diagnose, treat, cure or prevent any disease. Information provided by this website or this company is not a substitute for individual medical advice.<\/p>"
+          }
+        },
+        "menu_block_3Gem6Q": {
+          "type": "menu_block",
+          "settings": {
+            "menu_title": "Information",
+            "choose_link": "main-menu"
+          }
+        }
+      },
+      "block_order": [
+        "menu_block_tp4KF7",
+        "content_block_V7CdfU",
+        "block_EXFxhj",
+        "menu_block_3Gem6Q"
+      ],
+      "settings": {
+        "logo": "shopify:\/\/shop_images\/gold_graded_shilajit_logo_white_version_cba2b12a-0ae8-4bd9-850a-c8bd99c9d019.png",
+        "description": "<p>Empowering you to choose the natural path to wellness.<\/p>",
+        "copyright_text": "<p>©2024 PakShilajit . All Rights Reserved.<\/p>",
+        "show_social_icons": true,
+        "social_icon_title": "community",
+        "social_facebook_link": "#",
+        "social_tiktok_link": "#",
+        "social_instagram_link": "#",
+        "social_youtube_link": "#",
+        "register_form_title": "Sign up and save",
+        "register_form_description": "<p>We are the ones who do things the hard way, because it’s the right thing to do. We believe that safety is more than just a feature, it’s a way of life.<\/p><p>Subscribe to get special offers<\/p>",
+        "register_btn_url": "#",
+        "register_btn_text": "Register",
+        "choose_link": "our-policies"
+      }
+    }
+  },
+  "order": [
+    "custom_footer_H8M6Fy"
+  ]
+}

@@ -1,0 +1,44 @@
+{{ 'bundle.css' | assert_url | stylesheet_tag }}
+
+<div class="bundle__container">
+    <div class="bundle__title-wrapper">
+        <span>
+            title: {{ section.settings.page_title }}
+
+        </span>
+    </div>
+     <br>
+     <div class="bundle__card-container">
+        {% for product in section.settings.selected_collection.products %}
+            <div class="bundle__card">
+                <img src="{{}} | image_url">
+                <p>
+                    {{ product.title }}
+                </p>
+            </div>
+        {% endfor %}
+     </div>
+</div>
+
+{% schema %}
+{
+    "name": "Bundle",
+    "settings": [
+        {
+            "type": "text",
+            "id": "page_title",
+            "label": "Page Title"
+        },
+        {
+            "type": "textarea",
+            "id": "page_description",
+            "label": "Page Description"
+        },
+        {
+            "type": "collection",
+            "id": "selected_collection",
+            "label": "Select A Collection" 
+        }
+    ]
+}
+{% endschema %}

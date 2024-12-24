@@ -1,0 +1,182 @@
+{{ 'lab-test-section.css' |  asset_url |  stylesheet_tag }}
+<div class="lab__test-section">
+    <div class="page-width wrapper ">
+        {% if section.settings.section_title != blank %}
+            <div class="title ">
+                <h2 class="heading">{{ section.settings.section_title }}</h2>
+            </div>
+        {% endif %}
+        <div class="content__wrapper">
+            <div class="details__wrapper">
+                <div class="text__content">
+                    {% if section.settings.secondary_title != blank %}
+                        <h3 class="title_lab-test">{{ section.settings.secondary_title }}</h3>
+                    {% endif %}
+                    {% if section.settings.secondary_description != blank %}
+                        <p class="text">{{ section.settings.secondary_description }}</p>
+                    {% endif %}
+                </div>
+                <div class="slider__area">
+                    <div class="swiper-container" js-custom-lab-test>  
+                        <div class="swiper-wrapper">
+                            {% for slider_block in section.blocks %}
+                                    {% case slider_block.type %}
+                                        {% when 'slider-block' %}
+                                            <div class="slider__content swiper-slide">
+                                                <div class='slider-card_lab-test'>
+                                                    <h4 class="slider-heading">{{ slider_block.settings.slider_block_title }}</h4>
+                                                    <p class="text">{{ slider_block.settings.slider_block_description }}</p>
+                                                </div>
+                                            </div>
+                                    {% endcase %}
+                            {% endfor %}
+                            
+                        </div>
+                        {% comment %} <div class="swiper-pagination"></div>     {% endcomment %}
+                      
+                    </div>
+                    <div class="swiper-button-prev "></div>
+                    <div class="swiper-button-next "></div>
+                    <div class="swiper-pagination"></div>
+
+                </div>
+
+            </div>
+            <div class="tabs__wrapper" js-tabs-container>
+                <div class="tabs-item_wrapper">
+                    {% for  block in section.blocks %}
+                        {% case block.type %}
+                            {% when 'tabs-data' %}
+                                <div class="tab__item" js-tab-item data-image-src="{{ block.settings.tab_content |  image_url: width: 500 }}">
+                                    <div class="tab__title" js-tab-title >
+                                        <h3>{{ block.settings.tabs_title }}</h3>
+                                    </div>
+                                </div> 
+                        {% endcase %}
+                    {% endfor %}
+
+                </div>
+                <div class="tab__content" js-tab-content>
+                    <img src="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabsContainer = document.querySelector('[js-tabs-container]')
+        const tabsHeader = tabsContainer.querySelectorAll('[js-tab-item]')
+
+        tabsHeader.forEach((item) => {
+            item.addEventListener('click', function({currentTarget}) {
+                console.log({currentTarget})
+                let imageSrc= currentTarget.dataset.imageSrc
+                console.log({imageSrc},tabsContainer.querySelector('[js-tab-content]'))
+                tabsHeader.forEach(tabItem => tabItem.classList.contains('active') ? tabItem.classList.remove('active') : "")
+                if(imageSrc) {
+                    currentTarget.classList.add('active')
+                    tabsContainer.querySelector('[js-tab-content] img')?.setAttribute('src',imageSrc)
+                }
+            })
+        })
+
+        tabsHeader[0].click()
+
+    })
+</script>
+<script>
+    new Swiper('[js-custom-lab-test]', {   
+           spaceBetween: 10,
+           slidesPerView: 'auto',  
+        //    autoplay: {
+        //    delay: 100,
+        //   },  
+        //    speed: 10000,
+        //    parallex: true,
+           loop: true,  
+           breakpoints: {
+           // when window width is >= 480px
+           350: {
+           slidesPerView: 1.5
+           },
+           // when window width is >= 640px
+           767: {
+           slidesPerView: 2
+           }
+       },
+       pagination: {
+            el: '.lab__test-section .swiper-pagination',
+            clickable: true,
+            dynamicBullets: true
+        },
+        navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }  
+          
+       });  
+</script>
+
+
+{% schema %}
+{
+    "name": "Lab Test Section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "section_title",
+            "label": "Section Title"
+        },
+        {
+            "type": "text",
+            "id": "secondary_title",
+            "label": "Secondary Title"
+        },
+        {
+            "type": "richtext",
+            "id": "secondary_description",
+            "label": "Secondary Description"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Slider Block",
+            "type": "slider-block",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "slider_block_title",
+                    "label": "Slider Block Title"
+                },
+                {
+                    "type": "text",
+                    "id": "slider_block_description",
+                    "label": "Slider Block Description"
+                }
+            ]
+        },
+        {
+            "name": "Tabs Data",
+            "type": "tabs-data",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "tabs_title",
+                    "label": "Tab Title"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "tab_content",
+                    "label": "Tab Content"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Lab Test Section Tabs"
+        }
+    ]
+}
+{% endschema %}

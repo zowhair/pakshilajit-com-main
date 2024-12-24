@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "hb-contact-form": {
+      "type": "hb-contact-form",
+      "settings": {
+        "banner_form_img": "shopify:\/\/shop_images\/why_you_choose_pakshilajit_Desktop_Banner.jpg",
+        "main_title": "Sundried Himalayan Shilajit Gummies Made in USA",
+        "contact_form_title": "Leave A Message",
+        "sub_button": "SEND YOUR MESSAGE",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam amet neque quae molestiae doloremque? Nisi, eveniet. Et ex quas itaque rem. Molestiae atque possimus voluptatem rerum modi quod? Quisquam laudantium atque accusamus veritatis, pariatur aliquam expedita! Voluptas accusamus totam est quae. Placeat nemo unde nostrum delectus rem repellendus est nam."
+      }
+    }
+  },
+  "order": [
+    "hb-contact-form"
+  ]
+}

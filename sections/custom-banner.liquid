@@ -1,0 +1,79 @@
+{{ "custom-banner.css" |  asset_url |  stylesheet_tag }}
+
+<div class="custom-banner">
+  {% if section.settings.image != blank %}
+    <div class="custom-banner__image">
+      <picture>
+        <source media="(min-width: 768px)" srcset="{{ section.settings.image |  image_url: width: '2000x' }}" />
+        <source media="(min-width: 300px)" srcset="{{ section.settings.mobile_image | image_url: width: 750 }}" />
+        {{ section.settings.image | image_url: width: 1500 | image_tag:
+          loading: 'lazy',
+          class: image_class,
+          sizes: sizes,
+          widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+          alt: section.settings.image.alt | escape
+        }}
+      </picture>
+    </div>
+  {% endif %}
+  <div class="grid-wrapper">
+    <div class="page-width">
+      <div class="wrapper">
+        <div class="content">
+          {% if section.settings.title !=  blank %}
+            <h1 class="main-title">{{ section.settings.title }}</h1>
+          {% endif %}
+          {% if section.settings.text != blank %}
+            <div class="main-text">{{ section.settings.text }}</div>
+          {% endif %}
+          {% if  section.settings.button_text != blank %}
+            <a href="{{ section.settings.button_url }}" class="banner-button border-2">{{ section.settings.button_text }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Custom banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "Mobile Image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "url",
+        "id": "button_url",
+        "label": "Button url"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button text"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom banner"
+      }
+    ]
+  }
+{% endschema %}

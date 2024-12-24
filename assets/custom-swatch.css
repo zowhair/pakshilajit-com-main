@@ -1,0 +1,71 @@
+.product-form__input .custom-swatch-label.single__product-label  {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 5px 0;
+    border: 1px solid rgba(34, 130, 34, 0.3);
+    cursor: pointer;
+}
+.product-form__input .custom-swatch-label.single__product-label .dot__product {
+    display: flex;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid #fff;
+  box-sizing: border-box;
+  /* box-shadow: 0 0 0 2px var(rgba(34, 130, 34, 0.3)); */
+  box-shadow: 0 0 0 2px rgba(34, 130, 34, 0.3);
+}
+.product-form__input input:checked + .custom-swatch-label.single__product-label .dot__product {
+    background-color: rgba(34, 140, 34, 1);
+    box-shadow: 0 0 0 2px rgba(34, 140, 34, 1);
+
+}
+.product-form__input input:checked + .custom-swatch-label.single__product-label {
+    border: 2px solid rgba(34, 140, 34, 1);
+
+}
+.product-form__input .custom-swatch-label.single__product-label  .custom-swatch-span {
+    flex: 1 30%;
+}
+.product-form__input .custom-swatch-label.single__product-label .price__donun {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    line-height: 0.9;
+}
+.product-form__input .custom-swatch-label.single__product-label  .not__price {
+    color: red;
+    font-size: 15px;
+}
+
+.product-form__input .custom-swatch-label.double__product-label {
+    margin: 0;
+    border-radius: 8px;
+    border: 1px solid rgba(158,149,150,.25);
+    min-width: calc(25% - 9px);
+    background-color: #fff;
+    cursor: pointer;
+    padding: 13px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-form__input input:checked + .custom-swatch-label.double__product-label{
+    background-color: #000 !important;
+}
+.product-form__input input:checked + .custom-swatch-label.double__product-label .custom-swatch-span {
+    color: #f1b51e !important;
+}
+.two_options-container {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}

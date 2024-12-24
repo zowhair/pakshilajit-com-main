@@ -1,0 +1,125 @@
+{{ 'benefits-section.css' |  asset_url |  stylesheet_tag }}
+<div class="colored-bg">
+    <div class="page-width">
+        <div class="text-section">
+            <p class="heading">
+                {{ section.settings.benefits_title }}
+            </p>
+            <p class="text">
+               {{ section.settings.benefits_description }}
+            </p>
+        </div>
+        {% if section.blocks.first != blank %}
+            <div class="slider">
+                <div class="swiper-container" js-custom-benefits>   
+                    <div class="swiper-wrapper">  
+                        {% for block in section.blocks %}
+                            <div class="swiper-slide">
+                                <div class="swiper-ico">
+                                    {% comment %} {{ block.settings.benefit_block_svg }} {% endcomment %}
+                                    <img src="{{ block.settings.benefit_block_svg_1 |  image_url: width: "2000"  }}" alt="">
+                                </div>
+                                <p class="heading-title ">
+                                    {{ block.settings.benefit_block_title }}
+                                </p>
+                                <hr class="divider" />
+                                <div class="description-div">
+                                    {{ block.settings.benefit_block_description }}
+                                </div>
+                            </div> 
+                        {% endfor %}
+                           
+                    </div>
+                    
+                </div>
+                <div class="swiper-button-prev slider-navigation"></div>
+                <div class="swiper-button-next slider-navigation"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+    new Swiper('[js-custom-benefits]', {   
+           spaceBetween: 10,
+           slidesPerView: 'auto',
+           loop: true,  
+        //    speed: 10000,
+        //    parallex: true,
+           breakpoints: {
+           // when window width is >= 320px
+           320: {
+            slidesPerView: 1.5
+           },
+           // when window width is >= 640px
+           767: {
+            slidesPerView: 3
+           },
+           1200: {
+            slidesPerView: 3.5
+           }
+       },
+        pagination: {
+            el: '.colored-bg .swiper-pagination',
+            clickable: true,
+            dynamicBullets: true
+        } ,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }  
+
+          
+    });  
+</script>
+{% schema %}
+    {
+        "name": "Benefits Section",
+        "settings": [
+            {
+                "type": "text",
+                "id": "benefits_title",
+                "label": "Benefits Title"
+            },
+            {
+                "type": "richtext",
+                "id": "benefits_description",
+                "label": "Benefits Description"
+            }
+        ],
+        "blocks": [
+            {
+                "name": "Benefit Blocks",
+                "type": "benefit-blocks",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "benefit_block_title",
+                        "label": "Benefit Block Title"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "benefit_block_description",
+                        "label": "Benefit Block Description"
+                    },
+                    {
+                        "type": "html",
+                        "id": "benefit_block_svg",
+                        "label": "Select SVG"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "benefit_block_svg_1",
+                        "label": "Select Icon Image"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Benefits Section"
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,325 @@
+{{ 'custom-footer.css' | asset_url | stylesheet_tag }}
+
+<div class="custom_footer">
+  <div class="page-width">
+    <div class="custom_footer__wrapper">
+      <div class="custom_footer__logo_content">
+        {%- if section.settings.logo != blank -%}
+          <div class="custom_footer__logo">
+            <img src="{{ section.settings.logo |  image_url: width: "600x" }}" alt="">
+          </div>
+        {%- endif -%}
+        {%- if section.settings.description != blank -%}
+          <div class="custom_footer_description logo_description">
+            {{ section.settings.description }}
+          </div>
+        {%- endif -%}
+      </div>
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'menu_block' -%}
+          <div class="custom_footer__menu">
+            {%- if block.settings.menu_title != blank -%}
+              <h4 class="custom_footer__pre--title">{{ block.settings.menu_title }}</h4>
+            {%- endif -%}
+            <ul class="custom_footer_list">
+              {%- for link in linklists[block.settings.choose_link].links -%}
+                <li class="custom_footer_item">
+                  <a href="{{ link.url }}" class="custom_footer_link">
+                    {{ link.title }}
+                  </a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if section.settings.show_social_icons -%}
+        <div class="social_icon">
+          {%- if section.settings.social_icon_title != blank -%}
+            <div class="social_icon-header">
+              <h4 class="custom_footer__pre--title">{{ section.settings.social_icon_title }}</h4>
+            </div>
+          {%- endif -%}
+          <ul class="social_icons-lists">
+            {%- if section.settings.social_facebook_link != blank -%}
+              <li class="list-social__item">
+                <a href="{{ section.settings.social_facebook_link }}" class="link list-social__link">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="100"
+                    height="100"
+                    viewBox="0 0 50 50"
+                  >
+                    <path d="M32,11h5c0.552,0,1-0.448,1-1V3.263c0-0.524-0.403-0.96-0.925-0.997C35.484,2.153,32.376,2,30.141,2C24,2,20,5.68,20,12.368 V19h-7c-0.552,0-1,0.448-1,1v7c0,0.552,0.448,1,1,1h7v19c0,0.552,0.448,1,1,1h7c0.552,0,1-0.448,1-1V28h7.222 c0.51,0,0.938-0.383,0.994-0.89l0.778-7C38.06,19.518,37.596,19,37,19h-8v-5C29,12.343,30.343,11,32,11z"></path>
+                  </svg>
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if section.settings.social_tiktok_link != blank -%}
+              <li class="list-social__item">
+                <a href="{{ section.settings.social_tiktok_link }}" class="link list-social__link">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#000000"
+                    width="800px"
+                    height="800px"
+                    viewBox="0 0 512 512"
+                    id="icons"
+                  >
+                    <path d="M412.19,118.66a109.27,109.27,0,0,1-9.45-5.5,132.87,132.87,0,0,1-24.27-20.62c-18.1-20.71-24.86-41.72-27.35-56.43h.1C349.14,23.9,350,16,350.13,16H267.69V334.78c0,4.28,0,8.51-.18,12.69,0,.52-.05,1-.08,1.56,0,.23,0,.47-.05.71,0,.06,0,.12,0,.18a70,70,0,0,1-35.22,55.56,68.8,68.8,0,0,1-34.11,9c-38.41,0-69.54-31.32-69.54-70s31.13-70,69.54-70a68.9,68.9,0,0,1,21.41,3.39l.1-83.94a153.14,153.14,0,0,0-118,34.52,161.79,161.79,0,0,0-35.3,43.53c-3.48,6-16.61,30.11-18.2,69.24-1,22.21,5.67,45.22,8.85,54.73v.2c2,5.6,9.75,24.71,22.38,40.82A167.53,167.53,0,0,0,115,470.66v-.2l.2.2C155.11,497.78,199.36,496,199.36,496c7.66-.31,33.32,0,62.46-13.81,32.32-15.31,50.72-38.12,50.72-38.12a158.46,158.46,0,0,0,27.64-45.93c7.46-19.61,9.95-43.13,9.95-52.53V176.49c1,.6,14.32,9.41,14.32,9.41s19.19,12.3,49.13,20.31c21.48,5.7,50.42,6.9,50.42,6.9V131.27C453.86,132.37,433.27,129.17,412.19,118.66Z"/>
+                  </svg>
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if section.settings.social_instagram_link != blank -%}
+              <li class="list-social__item">
+                <a href="{{ section.settings.social_instagram_link }}" class="link list-social__link">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#000000"
+                    width="800px"
+                    height="800px"
+                    viewBox="0 0 32 32"
+                  >
+                    <path d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z"/><path d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z"/>
+                  </svg>
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if section.settings.social_youtube_link -%}
+              <li class="list-social__item">
+                <a href="{{ section.settings.social_youtube_link }}" class="link list-social__link">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="800px"
+                    height="800px"
+                    viewBox="0 -0.5 25 25"
+                    fill="none"
+                  >
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.168 19.0028C20.4724 19.0867 22.41 17.29 22.5 14.9858V9.01982C22.41 6.71569 20.4724 4.91893 18.168 5.00282H6.832C4.52763 4.91893 2.58998 6.71569 2.5 9.01982V14.9858C2.58998 17.29 4.52763 19.0867 6.832 19.0028H18.168Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.008 9.17784L15.169 11.3258C15.3738 11.4454 15.4997 11.6647 15.4997 11.9018C15.4997 12.139 15.3738 12.3583 15.169 12.4778L12.008 14.8278C11.408 15.2348 10.5 14.8878 10.5 14.2518V9.75184C10.5 9.11884 11.409 8.77084 12.008 9.17784Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </li>
+            {%- endif -%}
+          </ul>
+        </div>
+      {%- endif -%}
+      {%- if section.settings.register_form_title != blank -%}
+        <div class="custom_footer-register--form">
+          {%- if section.settings.register_form_title != blank -%}
+            <h4 class="custom_footer__pre--title">{{ section.settings.register_form_title }}</h4>
+          {%- endif -%}
+          {%- if section.settings.register_form_description != blank -%}
+            <div class="custom_footer_description">{{ section.settings.register_form_description }}</div>
+          {%- endif -%}
+          {%- if section.settings.register_btn_url != blank or section.settings.register_btn_text != blank -%}
+            <a
+              href="{{section.settings.register_btn_url}}"
+              class="custom_footer-btn"
+            >
+              <span class="custom_footer-text">{{- section.settings.register_btn_text -}}</span>
+              <div class="footer-btn-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+                  <path style="fill:#FFFFFF" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/>
+                </svg>
+              </div>
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'content_block' -%}
+          {% comment %} <div class="custom_footer__content">
+            {%- if block.settings.title != blank -%}
+              <h4 class="custom_footer__pre--title">{{ block.settings.title }}</h4>
+            {%- endif -%}
+            {%- if block.settings.contact_text != blank -%}
+              <div class="custom_footer_contact">
+                {{ block.settings.contact_text }}
+              </div>
+            {%- endif -%}
+          </div> {% endcomment %}
+        {%- endif -%}
+      {%- endfor -%}
+      </div>
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'block' -%}
+          <div class="custom_footer__content footer_centered-content">
+            {%- if block.settings.title != blank -%}
+              <h4 class="custom_footer__pre--title">{{ block.settings.title }}</h4>
+            {%- endif -%}
+            {%- if block.settings.description != blank -%}
+              <div class="custom_footer_description">
+                {{ block.settings.description }}
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+  </div>
+  {%- if section.settings.copyright_text != blank -%}
+    <div class="copyright_footer">
+      <div class="page-width">
+        <div class="custom_footer_copyright-wrapper">
+          <div class="custom_footer_copyright">{{ section.settings.copyright_text }}</div>
+          <div class="custom_footer__menu">
+            <ul class="custom_footer_list">
+              {%- for link in linklists[section.settings.choose_link].links -%}
+                <li class="custom_footer_item">
+                  <a href="{{ link.url }}" class="custom_footer_link">
+                    {{ link.title }}
+                  </a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+</div>
+{% schema %}
+{
+  "name": "Custom Footer",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo Image"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description "
+    },
+    {
+      "type": "richtext",
+      "id": "copyright_text",
+      "label": "Copyright Text"
+    },
+    {
+      "type": "header",
+      "content": "Social Icons"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social_icons",
+      "label": "Show Icons",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "social_icon_title",
+      "label": "Community",
+      "default": "community"
+    },
+    {
+      "type": "url",
+      "id": "social_facebook_link",
+      "label": "Facebook Link"
+    },
+    {
+      "type": "url",
+      "id": "social_tiktok_link",
+      "label": "tiktok Link"
+    },
+    {
+      "type": "url",
+      "id": "social_instagram_link",
+      "label": "Instagram Link"
+    },
+    {
+      "type": "url",
+      "id": "social_youtube_link",
+      "label": "Youtube Link"
+    },
+    {
+      "type": "header",
+      "content": "Registration"
+    },
+    {
+      "type": "text",
+      "id": "register_form_title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "register_form_description",
+      "label": "Registration Description"
+    },
+    {
+      "type": "url",
+      "id": "register_btn_url",
+      "label": "Registration Url"
+    },
+    {
+      "type": "text",
+      "id": "register_btn_text",
+      "label": "Registration Button Label"
+    },
+    {
+      "type": "link_list",
+      "id": "choose_link",
+      "label": "Choose Menu (Copyright)"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Menu Block",
+      "type": "menu_block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "menu_title",
+          "label": "Menu Title"
+        },
+        {
+          "type": "link_list",
+          "id": "choose_link",
+          "label": "Choose Menu"
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "type": "content_block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "contact_text",
+          "label": "contact_text"
+        }
+      ]
+    },
+    {
+      "name": "Block",
+      "type": "block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Footer"
+    }
+  ]
+}
+{% endschema %}

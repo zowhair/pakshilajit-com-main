@@ -1,0 +1,306 @@
+.product-popup-main p,
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.product-popup-main .wrapper {
+    max-width: 544px;
+    background: #FFFFFF;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 1;
+    display: flex;
+    height: 100vh;
+    transition: all .3s ease-in-out;
+
+}
+
+.product-popup-main.active .wrapper {
+    right: 0;
+}
+
+.product-popup_overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000080;
+    display: none;
+}
+
+.product-popup-main.active .product-popup_overlay {
+    display: block;
+}
+
+.product-popup-main {
+    z-index: 999;
+    position: relative;
+}
+
+.product-popup_header {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.product-popup-main .popup-title {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0 0 4px;
+    color: #3E2B2E;
+}
+.product-popup-main .sub-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    margin: 0;
+    color: #3E2B2E;
+}
+
+
+.product-popup-main .main-grid {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-popup-main .popup-inner {
+    overflow: auto;
+    padding-bottom: 20px;
+}
+
+.product-popup-main video,
+.product-popup-main img {
+    width: 100%;
+    height: 100% !important;
+    display: block;
+    object-fit: cover;
+}
+
+.product-popup_header {
+    padding-block: 16px;
+}
+
+.product-popup-main .accordion-wrapper {
+    margin-bottom: 24px;
+    border-top: 1px solid #9E9596;
+}
+
+.product-popup-main .popup-inner,
+.product-popup_header {
+    padding-inline: 40px;
+}
+
+.product-popup-main .accordion-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 16px;
+    cursor: pointer;
+}
+
+.product-popup-main .accordion-menu {
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    color: #3E2B2E;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.product-popup-mainsvg {
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+
+.product-popup-main .cross-icon {
+    max-width: 24px;
+    flex: 24px;
+    cursor: pointer;
+    display: block;
+}
+
+.product-popup-main .accordion-group .accordion-arrow {
+    max-width: 16px;
+    flex: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(180deg);
+}
+.product-popup-main .sub-title {
+    display:flex;
+    align-items: center;
+}
+.product-content .sub-title span {
+    display: flex;
+    align-items: center;
+}
+.product-content .sub-title span::after {
+    content: "";
+    display: block;
+    aspect-ratio: 1 / 1;
+    border: 1px solid #3E2B2E;
+    background-color: #3e2b2e;
+    border-radius: 50%;
+    margin: 0 4px;
+    width: 5px;
+    height: 5px;
+    margin: 0 4px;
+}
+.product-content .sub-title span:last-child::after {
+    content: unset;
+}
+.product-popup-main .accordion.open .accordion-arrow {
+    transform: unset;
+}
+.product-popup-main .accordion>ul>li .question h2 {
+    color: #3e2b2e;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 100%;
+    letter-spacing: .28px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 16px 40px 16px 0;
+}
+.product-popup-main .metafield-rich_text_field p{
+    padding-bottom: 12px;
+    margin: 0;
+}
+.product-popup-main .accordion-inner-content {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    color: #3E2B2E;
+    padding-bottom: 16px;
+}
+.product-popup-main .accordion-inner-content li{
+    list-style: disc;
+}
+.product-popup-main .metafield-rich_text_field ul {
+    padding-left: 28px;
+}
+.product-popup-main .accordion-inner-content strong {
+    font-weight: 700;
+}
+
+.product-popup-main .accordion {
+    border-bottom: 1px solid #9E9596;
+}
+
+.product-popup-main .nutrition-title {
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    color: #3E2B2E;
+    margin: 0 0 21px 0px;
+    text-transform: uppercase;
+}
+
+.product-popup-main .popup-inner .text {
+    margin-block: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    color: #3E2B2E;
+}
+
+.product-popup-main .image_with_video {
+    margin-bottom: 24px;
+}
+
+.product-popup-main .image_with_video .video,
+.product-popup-main .image_with_video .image {
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 1/0.7;
+}
+
+.product-popup-main .image_with_video .video.hide,
+.product-popup-main .image_with_video .image.hide {
+    display: none;
+}
+
+
+.product-popup-main .button-wrap {
+    background-color: #fff;
+    border-top: 1px solid #9E9596;
+    padding: 24px 40px;
+}
+
+.product-popup-main .button_popup {
+    background: #CD4645;
+    border: none;
+    border-radius: 90px;
+    padding: 20px 30px;
+    width: 100%;
+    font-family: Gotham;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.product-popup-main .popup-inner::-webkit-scrollbar {
+    width: 6px;
+}
+
+.product-popup-main .popup-inner::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.product-popup-main .popup-inner::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+.product-popup-main .content {
+    flex: 1;
+    padding-right: 10px;
+}
+
+@media screen and (max-width:767px) {
+
+    .product-popup-main .button-wrap,
+    .product-popup-main .popup-inner,
+    .product-popup_header {
+        padding-inline: 20px;
+    }
+
+    .product-popup-main .button_popup {
+        padding: 15px 30px;
+    }
+
+    .product-popup-main .cross-icon {
+        max-width: 20px;
+        flex: 20px;
+        margin-top: 4px;
+    }
+
+    .product-popup-main .wrapper {
+        height: 100dvh;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .product-popup-main .wrapper {
+        right: -200%;
+    }
+}

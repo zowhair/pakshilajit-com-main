@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "main": {
+      "type": "bundle",
+      "settings": {
+        "page_title": "Bundle Page",
+        "page_description": "This is bundle page",
+        "selected_collection": "shilajit-collection"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

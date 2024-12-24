@@ -1,0 +1,27 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-bundle",
+      "settings": {
+        "choose_collection": [
+          "buildabundle",
+          "full-size",
+          "snack-size-1",
+          "mini-size"
+        ],
+        "title": "",
+        "selection_box_title": "",
+        "bundle_title": "",
+        "bundle_sub_title": "",
+        "boxes_two_discount": "10% OFF",
+        "boxes_three_discount": "20% OFF",
+        "boxes_four_discount": "30% OFF",
+        "selling_plan_id": "598867991",
+        "selling_plan_discount": "10"
+      }
+    }
+  },
+  "order": [
+    "banner"
+  ]
+}

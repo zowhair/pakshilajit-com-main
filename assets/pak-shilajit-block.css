@@ -1,0 +1,219 @@
+.pak_shilajit_block img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.pak_shilajit_block {
+    padding: 40px 0;
+    background-color: rgb(255, 255, 255);
+}
+.pak_shilajit_block .page-width {
+    padding: 0 30px;
+}
+.pak_shilajit__title {
+    font-size: 28px;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin: 0 0 56px 0;
+}
+.pak_shilajit__button {
+    font-size: 20px;
+    color: #F1B51E;
+    width: 100%;
+    cursor: pointer;
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 700;
+    line-height: 1;
+    padding: 20px 15px;
+    letter-spacing: 2px;
+    background-color: #000;
+    border-radius: 20px;
+    display: block;
+    max-width: 347px;
+    margin: 0 auto 56px;
+    text-align: center;
+    text-decoration: none;
+}
+.pak_shilajit__main--wrapper {
+    position: relative;
+    width: 100%;
+}
+.pak_shilajit__back--image.desktop {
+    aspect-ratio: 1/0.538;
+}
+.pak_shilajit__back--image.mobile {
+    display: none;
+}
+.pak_shilajeet__texts--wrap {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+.shilajit_block--wrap {
+    max-width: 250px;
+    flex: 250px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.shilajit_block__image {
+    max-width: 50px;
+    flex: 50px;
+    min-width: 50px;
+    border-radius: 50%;
+    margin: 0 auto 16px;
+}
+.shilajit_block__title {
+    font-size: 22px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.09;
+    margin: 0 0 16px 0;
+    overflow-wrap: break-word;
+}
+.shilajit_block__texts {
+    /* font-size: 16px; */
+    /* font-weight: 400; */
+    /* line-height: 1.25; */
+    align-self: stretch;
+    flex-basis: auto;
+    text-align: center;
+    flex-shrink: 0;
+    overflow-wrap: break-word;
+    text-align-last: center;
+    letter-spacing: 0;
+
+    font-family: Montserrat,sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.6em;
+}
+.primary_styling .pak_shilajit__back--image.desktop {
+    aspect-ratio: 3.15;
+}
+.primary_styling .shilajit_block--wrap {
+    max-width: 400px;
+    min-width: 400px;
+    padding: 5px;
+    border: 1px solid #4F7942FF;
+    border-radius: 10px;
+}
+@media screen and (max-width : 1289px) {
+    .shilajit_block--wrap {
+        margin-bottom: 30px;
+    }
+    .shilajit_block__title {
+        font-size: 18px;
+        margin: 0 0 10px;
+    }
+    .shilajit_block__texts {
+        font-size: 14px;
+    }
+    .primary_styling .shilajit_block--wrap {
+        max-width: 315px;
+        min-width: 315px;
+    }
+}
+@media screen and (max-width : 991px) {
+    .shilajit_block--wrap {
+        max-width: 230px;
+        margin-bottom: 30px;
+    }
+    .shilajit_block__image {
+        max-width: 70px;
+        flex: 50px;
+        min-width: 60px;
+        border-radius: 50%;
+        margin: 0 auto 16px;
+    }
+    .shilajit_block__title {
+        font-size: 14px;
+        margin: 0;
+    }
+    .shilajit_block__texts {
+        font-size: 13px;
+    }
+    .primary_styling .pak_shilajit__back--image.desktop {
+        aspect-ratio: 2.55;
+    }
+    .primary_styling .shilajit_block--wrap {
+        max-width: 240px;
+        min-width: 240px;
+    }
+    .primary_styling .shilajit_block__title {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width : 767px) {
+    .pak_shilajit_block {
+        padding: 32px 0;
+        background-color: rgb(255, 255, 255);
+    }
+    .pak_shilajit_block .page-width {
+        padding: 0 20px;
+    }
+    .pak_shilajit__back--image.desktop {
+        display: none;
+    }
+    .pak_shilajit__back--image.mobile {
+        display: block;
+    }
+    .pak_shilajeet__texts--wrap {
+        top: unset;
+        bottom: 10vw;
+    }
+    .shilajit_block--wrap {
+        max-width: 150px;
+        margin-bottom: 30px;
+    }
+    .pak_shilajit__title {
+        font-size: 18px;
+        margin: 0 0 32px;
+    }
+    .shilajit_block__texts {
+        display: none;
+    }
+    .pak_shilajit__button {
+        font-size: 14px;
+        max-width: 200px;
+        margin-bottom: 32px;
+        padding: 14px 15px;
+    }
+    .primary_styling .pak_shilajeet__texts--wrap {
+        position: unset;
+    }
+    .primary_styling .shilajit_block--wrap {
+        max-width: 218px;
+        min-width: 218px;
+        margin-bottom: 24px;
+    }
+    .primary_styling .shilajit_block__title {
+        font-size: 10px;
+    }
+    .primary_styling .pak_shilajit__button {
+        font-size: 12px;
+        max-width: 158px;
+        margin-bottom: 32px;
+    }
+}
+
+@media screen and (max-width : 480px) {
+    .shilajit_block--wrap {
+        max-width: 120px;
+        margin-bottom: 17px;
+    }
+    .pak_shilajeet__texts--wrap {
+        bottom: 0;
+    }
+    .primary_styling .shilajit_block--wrap {
+        max-width: 153px;
+        min-width: 145px;
+        height: 90px;
+    }
+}

@@ -1,0 +1,158 @@
+{{ "pak-shilajit-block.css" |  asset_url |  stylesheet_tag }}
+<div class="pak_shilajit_block {{ section.settings.change_styling }}">
+    <div class="page-width">
+        <div class="pak_shilajit__wrapper">
+            {%- if section.settings.title != blank -%}
+              <h2 class="pak_shilajit__title">{{ section.settings.title }}</h2>
+            {%- endif -%}
+            {%- if section.settings.button != blank -%}
+              <a href="" class="pak_shilajit__button border-2">{{ section.settings.button }}</a>
+            {%- endif -%}
+            <div class="pak_shilajit__main--wrapper">
+                {%- if section.settings.back_image != blank -%}
+                  <div class="pak_shilajit__back--image desktop">
+                    <img src="{{ section.settings.back_image |  image_url: width: "2000x" }}" alt="">
+                  </div>
+                {%- endif -%}
+                {%- if section.settings.back_image_two != blank -%}
+                  <div class="pak_shilajit__back--image mobile">
+                    <img src="{{ section.settings.back_image_two |  image_url: width: "2000x" }}" alt="">
+                  </div>
+                {%- endif -%}
+                <div class="pak_shilajeet__texts--wrap">
+                  <div class="pak_shilajit__block--alpha">
+                    {% for block in section.blocks %}
+                          {%- if block.type == 'block'-%}
+                              <div class="shilajit_block--wrap">
+                                  {%- if block.settings.block_image != blank -%}
+                                    <div class="shilajit_block__image">
+                                        <img src="{{ block.settings.block_image |  image_url: width: "100x"  }}" alt="">
+                                    </div>
+                                  {%- endif -%}
+                                  {%- if block.settings.block_title != blank -%}
+                                    <h2 class="shilajit_block__title">{{ block.settings.block_title }}</h2>
+                                  {%- endif -%}
+                                  {%- if block.settings.block_text != blank -%}
+                                    <div class="shilajit_block__texts">{{ block.settings.block_text }}</div>
+                                  {%- endif -%}
+                              </div>
+                          {%- endif -%}
+                      {% endfor %}
+                  </div>
+                  <div class="pak_shilajit__block--beta">
+                      {% for block in section.blocks %}
+                          {%- if block.type == 'second_block'-%}
+                              <div class="shilajit_block--wrap">
+                                  {%- if block.settings.block_image_second != blank -%}
+                                    <div class="shilajit_block__image">
+                                        <img src="{{ block.settings.block_image_second |  image_url: width: "100x"  }}" alt="">
+                                    </div>
+                                  {%- endif -%}
+                                  {%- if block.settings.block_title_second != blank -%}
+                                    <h2 class="shilajit_block__title">{{ block.settings.block_title_second }}</h2>
+                                  {%- endif -%}
+                                  {%- if block.settings.block_text_second != blank -%}
+                                    <div class="shilajit_block__texts">{{ block.settings.block_text_second }}</div>
+                                  {%- endif -%}
+                              </div>
+                          {%- endif -%}
+                      {% endfor %}
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% schema %}
+  {
+    "name": "Pak Shilajit",
+    "settings": [
+      {
+        "type": "select",
+        "id": "change_styling",
+        "label": "Change Styling",
+        "options": [
+          {
+            "value": "default_styling",
+            "label": "Default stylings"
+          },
+          {
+            "value": "primary_styling",
+            "label": "Primary stylings"
+          }
+          
+        ]
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },
+      {
+        "type": "text",
+        "id": "button",
+        "label": "button"
+      },
+      {
+        "type": "image_picker",
+        "id": "back_image",
+        "label": "Back Image (Desktop)"
+      },
+      {
+        "type": "image_picker",
+        "id": "back_image_two",
+        "label": "Back Image (Mobile)"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "block",
+        "type": "block",
+        "settings": [
+           {
+             "type": "image_picker",
+             "id": "block_image",
+             "label": "Block Image"
+           },
+           {
+             "type": "text",
+             "id": "block_title",
+             "label": "Block Title"
+           },
+           {
+             "type": "text",
+             "id": "block_text",
+             "label": "Block Text"
+           }
+        ]
+      },
+      {
+        "type": "second_block",
+        "name": "second_block",
+        "settings": [
+            {
+             "type": "image_picker",
+             "id": "block_image_second",
+             "label": "Block Image"
+           },
+           {
+             "type": "text",
+             "id": "block_title_second",
+             "label": "Block Title"
+           },
+           {
+             "type": "text",
+             "id": "block_text_second",
+             "label": "Block Text"
+           }
+        ]
+      }
+    ],
+    
+    "presets": [
+      {
+        "name": "Pak Shilajit"
+      }
+    ]
+  }
+{% endschema %}

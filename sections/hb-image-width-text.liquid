@@ -1,0 +1,111 @@
+{{ 'hb-image-width-text.css' | asset_url | stylesheet_tag }}
+<div class="hb_image_width_text {{ section.settings.style }}">
+  <div class="hb_image_width_text-main-wrapper">
+    {%- unless section.settings.style == 'style_normal' -%}
+      {%- if section.settings.bannner_image != blank -%}
+        <div class="hb_image_width_text-image">
+          <div class="hb_image_width_text-image-inner">
+            <img src="{{ section.settings.bannner_image | image_url: width: "1200x" }}" alt="">
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endunless -%}
+    <div class="hb_image_width_text-grid">
+      {%- if section.settings.style == 'style_normal' -%}
+        <div class="page-width">
+      {%- endif -%}
+      {%- if section.settings.style == 'style_normal' -%}
+        <div class="hb_image_width_text-inner">
+      {%- endif -%}
+      {%- if section.settings.style == 'style_normal' -%}
+        {%- if section.settings.hb_image_width_text_main_title != blank -%}
+          <div class="hb_image_width_text-left-sec">
+            <h2 class="hb_image_width_text-main-title">{{ section.settings.hb_image_width_text_main_title }}</h2>
+          </div>
+        {%- endif -%}
+      {%- endif -%}
+      <div class="hb_image_width_text-wrapper">
+        {%- for block in section.blocks -%}
+          <div class="hb_image_width_text-content">
+            {%- if block.settings.hb_image_width_text_title != blank -%}
+              <h2 class="hb_image_width_text-title">{{ block.settings.hb_image_width_text_title }}</h2>
+            {%- endif -%}
+            {%- if block.settings.hb_image_width_text_description != blank -%}
+              <div class="hb_image_width_text-description">{{ block.settings.hb_image_width_text_description }}</div>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+      {%- if section.settings.style == 'style_normal' -%}
+        </div>
+      {%- endif -%}
+      {%- if section.settings.style == 'style_normal' -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "HB Image With Text",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bannner_image",
+      "label": "Add Image"
+    },
+    {
+      "type": "text",
+      "id": "hb_image_width_text_main_title",
+      "label": "Add Title"
+    },
+    {
+      "type": "select",
+      "id": "style",
+      "label": "Style",
+      "options": [
+        {
+          "value": "style_normal",
+          "label": "Style Normal"
+        },
+        {
+          "value": "style_primary",
+          "label": "Style Primary"
+        },
+        {
+          "value": "style_secondary",
+          "label": "Style Secondary"
+        },
+        {
+          "value": "style_tertiary",
+          "label": "Style Tertiary"
+        }
+      ],
+      "default": "style_primary"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Add Content",
+      "type": "Content",
+      "settings": [
+        {
+          "type": "text",
+          "id": "hb_image_width_text_title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "hb_image_width_text_description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "HB Image With Text"
+    }
+  ]
+}
+{% endschema %}

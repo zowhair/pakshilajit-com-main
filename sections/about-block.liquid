@@ -1,0 +1,66 @@
+{{ 'about-block.css' |  asset_url |  stylesheet_tag }}
+<div class="about_block">
+    <div class="page-width">
+      {% for block in section.blocks %}
+        <div class="about_block__wrapper {% if block.settings.check_box %} about_check {% endif %}">
+            {%- if block.settings.image != blank -%}
+                <div class="abou_block__image">
+                    <img src="{{ block.settings.image |  image_url: width: "600x"  }}" alt="">
+                </div>
+            {%- endif -%}
+            <div class="about_block__texts--wrap">
+                {%- if block.settings.title != blank -%}
+                    <h2 class="about_block_title">{{ block.settings.title }}</h2>
+                {%- endif -%}
+                {%- if block.settings.content != blank -%}
+                    <p class="about_block__content">{{ block.settings.content }}</p>
+                {%- endif -%}
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+</div>
+{%- style -%}
+  
+{%- endstyle -%}
+{% schema %}
+  {
+    "name": "About Block",
+    "settings": [
+        
+    ],
+    "blocks": [
+      {
+        "name": "block",
+        "type": "block",
+        "settings": [
+          {
+            "type": "checkbox", 
+            "id": "check_box",
+            "label": "Change Direction"
+          },
+           {
+             "type": "image_picker",
+             "id": "image",
+             "label": "Image"
+           },
+           {
+             "type": "text",
+             "id": "title",
+             "label": "Title"
+           },
+           {
+             "type": "text",
+             "id": "content",
+             "label": "Content"
+           }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "About Block"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,14 @@
+.bundle__container {
+    display: flex;
+    flex-direction: column;
+}
+.bundle__container .bundle__title-wrapper {
+    background-color: red;
+}
+.bundle__container .bundle__card-container {
+    display: flex;
+    flex-direction: row;
+}
+.bundle__container .bundle__card-container .bundle__card{
+    padding: 0 8px 48px;
+}

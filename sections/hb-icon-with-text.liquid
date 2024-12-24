@@ -1,0 +1,55 @@
+{{ 'hb-icon-with-text.css' | asset_url | stylesheet_tag }}
+<div class="hb_icon_with_text">
+  <div class="page-width">
+    <div class="hb_icon_with_text-wrapper">
+      {%- if section.settings.hb_icon_with_text != blank -%}
+        <div class="hb_icon_with_text-content">
+          <div class="hb_icon_with_text-content-inner">
+            <span class="hb_icon_with_text-para">{{ section.settings.hb_icon_with_text }}</span>
+          </div>
+        </div>
+      {%- endif -%}
+      <div class="hb_icon_with_text-icons">
+        {%- for block in section.blocks -%}
+          {%- if block.settings.hb_icon_with_text_image != blank -%}
+            <div class="hb_icon_with_texticon-inner">
+              <div class="hb_icon_with_text-icon">
+                <img src="{{ block.settings.hb_icon_with_text_image | image_url: width: "500x" }}" alt="">
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "HB Icon With Text",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "hb_icon_with_text",
+      "label": "Add content"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Add Image",
+      "type": "image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "hb_icon_with_text_image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "HB Icon With Text"
+    }
+  ]
+}
+{% endschema %}

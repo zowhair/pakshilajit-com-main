@@ -1,0 +1,87 @@
+{{ "image-with-richtext.css" | asset_url | stylesheet_tag }}
+
+<div class="image-with-richtext">
+    <div class="page-width">
+        {%- if section.settings.title != blank -%}
+            <h2 class="title">
+                {{ section.settings.title }}
+            </h2>
+        {%- endif -%}
+        <div class="wrapper">
+            {%- if section.settings.image != blank -%}
+                <div class="image_gallery">
+                    <img src="{{ section.settings.image |  image_url: width: "1400x" }}" alt="">
+                </div>
+            {%- endif -%}
+            <div class="richtext_content">
+                {%- for block in section.blocks -%}
+                    {%- if block.type == "content_block" -%}
+                        <div class="richtext_wrapper">
+                            {%- if block.settings.text_image != blank -%}
+                                <div class="richtext_image">
+                                    <img src="{{ block.settings.text_image |  image_url: width: "300x" }}" alt="">
+                                </div>
+                            {%- endif -%}
+                            <div class="content">
+                                {%- if block.settings.content_title != blank or block.settings.description != blank -%}
+                                    <h2 class="content_title">
+                                        {{ block.settings.content_title }}
+                                    </h2>
+                                    <div class="content_description">
+                                        {{ block.settings.description }}
+                                    </div>
+                                {%- endif -%}
+                            </div>
+                        </div>
+                    {%- endif -%}
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</div>
+{% schema %}
+  {
+    "name": "Image With Richtext",
+    "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+    ],
+    "blocks": [
+      {
+        "name": "Content",
+        "type": "content_block",
+        "settings": [
+           {
+             "type": "image_picker",
+             "id": "text_image",
+             "label": "Text Image"
+           },
+           {
+             "type": "text",
+             "id": "content_title",
+             "label": "Content Title"
+           },
+           {
+             "type": "richtext",
+             "id": "description",
+             "label": "Description" 
+           }
+        ]
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "Image With Richtext"
+      }
+    ]
+  }
+{% endschema %}

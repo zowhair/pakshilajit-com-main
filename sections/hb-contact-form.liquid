@@ -1,0 +1,111 @@
+{{ 'hb-contact-form.css' | asset_url | stylesheet_tag }}
+<div class="hb_contact_form">
+  <div class="hb_contact_form_main-wrapper">
+    <div class="hb_contact_form-banner">
+      {%- if section.settings.banner_form_img != blank -%}
+        <div class="hb_contact_form-image">
+          <img src="{{ section.settings.banner_form_img | image_url: width: "1200x" }}" alt="">
+        </div>
+      {%- endif -%}
+      <div class="hb_contact_form-grid">
+        <div class="page-width">
+          <div class="hb_contact_form_banner-content">
+            {%- if section.settings.main_title != blank -%}
+              <h2 class="main_title">{{ section.settings.main_title }}</h2>
+            {%- endif -%}
+            {%- if section.settings.description != blank -%}
+              <span class="description">{{ section.settings.description }}</span>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hb_contact-bottom-sec">
+      <div class="page-width">
+        {%- if section.settings.contact_form_title != blank -%}
+          <div class="contact-form-header">
+            <h3 class="contact-form-title">{{ section.settings.contact_form_title }}</h3>
+          </div>
+        {%- endif -%}
+        <div class="contact-form-inner">
+          {% form 'contact', id: 'ContactForm', class: 'contact-form' %}
+            <div class="contact__fields">
+              <div class="form-col">
+                <input
+                  class="cus_field-input"
+                  type="text"
+                  name="contact[name]"
+                  id="contactFormName"
+                  placeholder="ENTER YOUR NAME"
+                  required
+                >
+              </div>
+              <div class="form-col">
+                <input
+                  class="cus_field-input"
+                  type="email"
+                  name="contact[email]"
+                  id="contactFormEmail"
+                  placeholder="ENTER YOUR EMAIL"
+                  required
+                >
+              </div>
+            </div>
+            <div class="form-col">
+              <textarea
+                class="text-area cus_field-input"
+                name="contact[message]"
+                id="contactFormMessage"
+                required
+                placeholder="ENTER YOUR MESSAGE"
+              ></textarea>
+            </div>
+            {%- if section.settings.sub_button != blank -%}
+              <div class="contact__button ">
+                <button type="submit" class="button">{{ section.settings.sub_button }}</button>
+              </div>
+            {%- endif -%}
+          {% endform %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Form",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner_form_img",
+      "label": "Banner Image"
+    },
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "contact_form_title",
+      "label": "Form Title"
+    },
+    {
+      "type": "text",
+      "id": "sub_button",
+      "label": "Button Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Form"
+    }
+  ]
+}
+{% endschema %}

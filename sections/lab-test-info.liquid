@@ -1,0 +1,71 @@
+{{ "lab-test-info.css" |  asset_url |  stylesheet_tag }}
+
+<div class="lab_test_info">
+  <div class="page-width">
+    <div class="wrapper">
+      {% if section.settings.title  != blank %}
+        <h3 class="info-title">{{ section.settings.title }}</h3>
+      {% endif %}
+      {% if section.settings.text  != blank %}
+        <span class="info-text">{{ section.settings.text }}</span>
+      {% endif %}
+      <div class="content">
+        {% for block in section.blocks %}
+          {% if block.type == "test_info" %}
+           {% if block.settings.info_item_title != blank or block.settings.info_item_text %}
+              <div class="info_item">
+                <div class="info_item--inner">
+                  {% if block.settings.info_item_title != blank %}
+                    <h4 class="info_item--title">{{ block.settings.info_item_title }}</h4>
+                    {% endif %}
+                  {% if block.settings.info_item_text != blank %}
+                    <div class="info_item--text">{{ block.settings.info_item_text }}</div>
+                  {% endif %}
+                </div>
+              </div>
+           {% endif %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Lab test info",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Text"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "test_info",
+        "name": "Test info",
+        "settings": [
+          {
+            "type": "text",
+            "id": "info_item_title",
+            "label": "Info item title"
+          },
+          {
+            "type": "richtext",
+            "id": "info_item_text",
+            "label": "Info item text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {"name": "Lab Test Info"}
+    ]
+  }
+{% endschema %}

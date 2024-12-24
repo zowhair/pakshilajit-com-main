@@ -1,0 +1,251 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "review_slider_D3ciVQ_coll": {
+      "type": "review-slider",
+      "blocks": {
+        "review_blocks_tD4nLg": {
+          "type": "review-blocks",
+          "settings": {
+            "review_image": "shopify://shop_images/shilajit-review-01.webp"
+          }
+        },
+        "review_blocks_9czTWD": {
+          "type": "review-blocks",
+          "settings": {
+            "review_image": "shopify://shop_images/pakshilajit-review-02.webp"
+          }
+        },
+        "review_blocks_VMrrKc": {
+          "type": "review-blocks",
+          "settings": {
+            "review_image": "shopify://shop_images/pakshilajit-review-03.webp"
+          }
+        },
+        "review_blocks_GkUBiW": {
+          "type": "review-blocks",
+          "settings": {
+            "review_image": "shopify://shop_images/pakshilajit-review-04.webp"
+          }
+        },
+        "review_blocks_YKRLHH": {
+          "type": "review-blocks",
+          "settings": {
+            "review_image": "shopify://shop_images/pakshilajit-review-05.webp"
+          }
+        },
+        "review_blocks_dU6aR7": {
+          "type": "review-blocks",
+          "settings": {
+            "review_image": "shopify://shop_images/pakshilajit-review-07.webp"
+          }
+        },
+        "review_blocks_PaNzX7": {
+          "type": "review-blocks",
+          "settings": {
+            "review_image": "shopify://shop_images/pakshilajit-review-08.webp"
+          }
+        }
+      },
+      "block_order": [
+        "review_blocks_tD4nLg",
+        "review_blocks_9czTWD",
+        "review_blocks_VMrrKc",
+        "review_blocks_GkUBiW",
+        "review_blocks_YKRLHH",
+        "review_blocks_dU6aR7",
+        "review_blocks_PaNzX7"
+      ],
+      "settings": {
+        "review_section_title": "OVER 53000 Customers ALL Around the World",
+        "review_section_description": "8 out of 10 Customers Feel the Effect of Shilajit after Single Usage. PakShilajit have over 53000 Customers all over the world which are get huge benefits from our Premium Sundried Himalayan Shilajit."
+      }
+    },
+    "pak_shilajit_block_NewWYn_coll": {
+      "type": "pak-shilajit-block",
+      "blocks": {
+        "block_BwpKXN": {
+          "type": "block",
+          "settings": {
+            "block_image": "shopify://shop_images/ethicaly_sourced.jpg",
+            "block_title": "ETHICALLY SOURCED",
+            "block_text": "We partner with local Himalayan communities to harvest pure shilajit."
+          }
+        },
+        "block_hEKa4B": {
+          "type": "block",
+          "settings": {
+            "block_image": "shopify://shop_images/gold_graded_shilajit.png",
+            "block_title": "HARVESTED AT THE PEAK",
+            "block_text": "Collected from 17,000 ft above the Himalayas to retain its powerful form."
+          }
+        },
+        "block_qMNPCp": {
+          "type": "block",
+          "settings": {
+            "block_image": "shopify://shop_images/sundried_pakshilajit.png",
+            "block_title": "LONG SUN-DRIED PROCESS",
+            "block_text": "Our Shilajit undergoes traditional filtering & purification process to retain potency."
+          }
+        },
+        "second_block_6Ny4xR": {
+          "type": "second_block",
+          "settings": {
+            "block_image_second": "shopify://shop_images/lab_tested_shilajit.png",
+            "block_title_second": "THIRD-PARTY LAB TESTED",
+            "block_text_second": "Verified by US labs to guarantee purity and safety."
+          }
+        },
+        "second_block_q6mK3L": {
+          "type": "second_block",
+          "settings": {
+            "block_image_second": "shopify://shop_images/Best_Filtration_Shilajit.png",
+            "block_title_second": "METICULOUSLY PURIFIED",
+            "block_text_second": "Every product passes a rigorous purification process to remove contaminants like mercury and lead."
+          }
+        },
+        "second_block_mBmMPz": {
+          "type": "second_block",
+          "settings": {
+            "block_image_second": "shopify://shop_images/money_back.png",
+            "block_title_second": "100% MONEY-BACK GUARANTEE",
+            "block_text_second": "If you're not satisfied with your purchase, we're happy to hear your concerns and process refunds."
+          }
+        }
+      },
+      "block_order": [
+        "block_BwpKXN",
+        "block_hEKa4B",
+        "block_qMNPCp",
+        "second_block_6Ny4xR",
+        "second_block_q6mK3L",
+        "second_block_mBmMPz"
+      ],
+      "settings": {
+        "change_styling": "default_styling",
+        "title": "PakShilajit Is The #1 Choice",
+        "button": "Shop Now",
+        "back_image": "shopify://shop_images/why_you_choose_pakshilajit_Desktop_Banner.jpg",
+        "back_image_two": "shopify://shop_images/why_you_choose_pakshilajit_mobile_version_-latest.jpg"
+      }
+    },
+    "benefits_section_DykhLj_coll": {
+      "type": "benefits-section",
+      "blocks": {
+        "benefit_blocks_4XNHU9": {
+          "type": "benefit-blocks",
+          "settings": {
+            "benefit_block_title": "Boost your energy",
+            "benefit_block_description": "<ul><li>Mental and physical performance enhancer.</li><li>Experience increased vitality and endurance with Shilajit’s potential performance-enhancing properties.</li><li>Natural adaptogenic effects without burn out.</li></ul>",
+            "benefit_block_svg": "<svg aria-hidden=\"true\" class=\"e-font-icon-svg e-fas-leaf\" viewbox=\"0 0 576 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M546.2 9.7c-5.6-12.5-21.6-13-28.3-1.2C486.9 62.4 431.4 96 368 96h-80C182 96 96 182 96 288c0 7 .8 13.7 1.5 20.5C161.3 262.8 253.4 224 384 224c8.8 0 16 7.2 16 16s-7.2 16-16 16C132.6 256 26 410.1 2.4 468c-6.6 16.3 1.2 34.9 17.5 41.6 16.4 6.8 35-1.1 41.8-17.3 1.5-3.6 20.9-47.9 71.9-90.6 32.4 43.9 94 85.8 174.9 77.2C465.5 467.5 576 326.7 576 154.3c0-50.2-10.8-102.2-29.8-144.6z\"></path></svg>"
+          }
+        },
+        "benefit_blocks_Teq7TJ": {
+          "type": "benefit-blocks",
+          "settings": {
+            "benefit_block_title": "Support weight management",
+            "benefit_block_description": "<ul><li>Suppresses increased or excessive appetite.</li><li>Shilajit may aid in weight management by supporting energy levels. </li><li>Helps build muscle for increased fat burning.</li></ul>",
+            "benefit_block_svg": "<svg aria-hidden=\"true\" class=\"e-font-icon-svg e-fas-weight\" viewbox=\"0 0 512 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M448 64h-25.98C438.44 92.28 448 125.01 448 160c0 105.87-86.13 192-192 192S64 265.87 64 160c0-34.99 9.56-67.72 25.98-96H64C28.71 64 0 92.71 0 128v320c0 35.29 28.71 64 64 64h384c35.29 0 64-28.71 64-64V128c0-35.29-28.71-64-64-64zM256 320c88.37 0 160-71.63 160-160S344.37 0 256 0 96 71.63 96 160s71.63 160 160 160zm-.3-151.94l33.58-78.36c3.5-8.17 12.94-11.92 21.03-8.41 8.12 3.48 11.88 12.89 8.41 21l-33.67 78.55C291.73 188 296 197.45 296 208c0 22.09-17.91 40-40 40s-40-17.91-40-40c0-21.98 17.76-39.77 39.7-39.94z\"></path></svg>"
+          }
+        },
+        "benefit_blocks_dhB8xP": {
+          "type": "benefit-blocks",
+          "settings": {
+            "benefit_block_title": "Improve sleep quality",
+            "benefit_block_description": "<ul><li>Optimizes sleep cycles and alertness while wake.</li><li>Enjoy restful nights and wake up refreshed with Shilajit.</li><li>Rapidly diminishes jetlag.</li></ul>",
+            "benefit_block_svg": "<svg aria-hidden=\"true\" class=\"e-font-icon-svg e-fas-bed\" viewbox=\"0 0 640 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M176 256c44.11 0 80-35.89 80-80s-35.89-80-80-80-80 35.89-80 80 35.89 80 80 80zm352-128H304c-8.84 0-16 7.16-16 16v144H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v352c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16v-48h512v48c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V240c0-61.86-50.14-112-112-112z\"></path></svg>"
+          }
+        },
+        "benefit_blocks_QXQCiw": {
+          "type": "benefit-blocks",
+          "settings": {
+            "benefit_block_title": "Glow Your Skin",
+            "benefit_block_description": "<ul><li>Slow down your aging process </li><li>It is also a source of antioxidants and anti-inflammatory properties that aid the repair of cell damage and limit the deterioration of the body due to age</li></ul>",
+            "benefit_block_svg": "<svg aria-hidden=\"true\" class=\"e-font-icon-svg e-fas-female\" viewbox=\"0 0 256 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M128 0c35.346 0 64 28.654 64 64s-28.654 64-64 64c-35.346 0-64-28.654-64-64S92.654 0 128 0m119.283 354.179l-48-192A24 24 0 0 0 176 144h-11.36c-22.711 10.443-49.59 10.894-73.28 0H80a24 24 0 0 0-23.283 18.179l-48 192C4.935 369.305 16.383 384 32 384h56v104c0 13.255 10.745 24 24 24h32c13.255 0 24-10.745 24-24V384h56c15.591 0 27.071-14.671 23.283-29.821z\"></path></svg>"
+          }
+        },
+        "benefit_blocks_UnjwUz": {
+          "type": "benefit-blocks",
+          "settings": {
+            "benefit_block_title": "Strengthens immune system",
+            "benefit_block_description": "<ul><li>Optimizing a healthy response to inflammation.</li><li>Shilajit’s antioxidant properties may contribute to a robust immune response.</li><li>Rapidly delivers rare minerals, metabolites, and antioxidants to all cells</li></ul>",
+            "benefit_block_svg": "<svg aria-hidden=\"true\" class=\"e-font-icon-svg e-fas-heartbeat\" viewbox=\"0 0 512 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M320.2 243.8l-49.7 99.4c-6 12.1-23.4 11.7-28.9-.6l-56.9-126.3-30 71.7H60.6l182.5 186.5c7.1 7.3 18.6 7.3 25.7 0L451.4 288H342.3l-22.1-44.2zM473.7 73.9l-2.4-2.5c-51.5-52.6-135.8-52.6-187.4 0L256 100l-27.9-28.5c-51.5-52.7-135.9-52.7-187.4 0l-2.4 2.4C-10.4 123.7-12.5 203 31 256h102.4l35.9-86.2c5.4-12.9 23.6-13.2 29.4-.4l58.2 129.3 49-97.9c5.9-11.8 22.7-11.8 28.6 0l27.6 55.2H481c43.5-53 41.4-132.3-7.3-182.1z\"></path></svg>"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_blocks_4XNHU9",
+        "benefit_blocks_Teq7TJ",
+        "benefit_blocks_dhB8xP",
+        "benefit_blocks_QXQCiw",
+        "benefit_blocks_UnjwUz"
+      ],
+      "settings": {
+        "benefits_title": "Benefits of Sundried Himalayan Shilajit",
+        "benefits_description": "<p> PakShilajit finetunes your body to its maximum potential. PakShilajit AE benefits exceed and outperform any conventional shilajit ever made. </p>"
+      }
+    },
+    "1732356720c2bca155": {
+      "type": "apps",
+      "blocks": {
+        "audien_reviews_review_list_other_h9XweP": {
+          "type": "shopify://apps/audien-reviews/blocks/review_list_other/ce002b21-24e0-4d65-87ca-18c9770b24d4",
+          "settings": {
+            "show_reviews_from": "0",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "audien_reviews_review_list_other_h9XweP"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "review_slider_D3ciVQ_coll",
+    "pak_shilajit_block_NewWYn_coll",
+    "benefits_section_DykhLj_coll",
+    "1732356720c2bca155"
+  ]
+}

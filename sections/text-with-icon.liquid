@@ -1,0 +1,90 @@
+{{ 'text-with-icon.css' |  asset_url |  stylesheet_tag}}
+<div class="text_with_icon">
+    <div class="page-width">
+        <div class="text_with_icon__wrapper">
+          <div class="swiper-container" js--icons-custom-slider>
+            <div class="swiper-wrapper">
+              {% for block in section.blocks %}
+                <div class="text_icon--wrap swiper-slide">
+                    {%- if block.settings.icon != blank -%}
+                        <div class="text_with_icon__icon">
+                          {% comment %} {{ block.settings.icon }} {% endcomment %}
+                            <img src="{{ block.settings.icon_svg |  image_url: width: 50 }}" />
+                        </div>  
+                    {%- endif -%}
+                    {%- if block.settings.title != blank -%}
+                        <h2 class="text_with_icon__title">{{ block.settings.title }}</h2>
+                    {%- endif -%}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    new Swiper('[js--icons-custom-slider]', {
+        spaceBetween: 10,
+        slidesPerView: 'auto',    
+        loop: true,
+        // autoplay : {
+        //     delay : 120,
+        // },
+        // speed: 3000,
+        // parallex: true,
+        // Responsive breakpoints
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+            slidesPerView: 1
+            },
+            // when window width is >= 640px
+            767: {
+            slidesPerView: 4
+            }
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }  
+    });  
+</script>
+{% schema %}
+  {
+    "name": "Text With Icon",
+    "settings": [
+      
+    ],
+    "blocks": [
+      {
+        "name": "block",
+        "type": "block",
+        "settings": [
+            {
+              "type": "html",
+              "id": "icon",
+              "label": "Icon"
+            },
+            {
+              "type": "image_picker",
+              "id": "icon_svg",
+              "label": "Icon SVG"
+            },
+           {
+             "type": "text",
+             "id": "title",
+             "label": "Title"
+           }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Text With Icon"
+      }
+    ]
+  }
+{% endschema %}

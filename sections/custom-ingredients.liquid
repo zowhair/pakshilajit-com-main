@@ -1,0 +1,67 @@
+{{'custom-ingredients.css' |  asset_url |  stylesheet_tag}}
+<div class="custom_ingredients">
+    <div class="page-width">
+        <div class="custom_ingredients__wrapper">
+            {%- if section.settings.title != blank-%}
+                <h2 class="custom_ingredients__title">{{ section.settings.title }}</h2>
+            {%- endif -%}
+            <div class="custom_ingredients__main--wrapper">
+                {% for block in section.blocks %}
+                    <div class="custom_ingredients__block">
+                        {%- if block.settings.image != blank -%}
+                            <div class="custom_ingredients__block--image">
+                                <img src="{{ block.settings.image |  image_url: width: "200x"  }}" alt="">
+                            </div>
+                        {%- endif -%}
+                        {%- if block.settings.block_title != blank -%}
+                            <h3 class="custom_ingredients__block--title block_text">{{ block.settings.block_title }}</h3>
+                        {%- endif -%}
+                        {%- if block.settings.block_text != blank -%}
+                            <p class="custom_ingredients__block--text block_text">{{ block.settings.block_text }}</p>
+                        {%- endif -%}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% schema %}
+  {
+    "name": "Custom Ingredients",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "block",
+        "type": "block",
+        "settings": [
+           {
+             "type": "image_picker",
+             "id": "image",
+             "label": "Block Image"
+           },
+           {
+             "type": "text",
+             "id": "block_title",
+             "label": "Block Title"
+           },
+           {
+             "type": "text",
+             "id": "block_text",
+             "label": "Block Text"
+           }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Ingredients"
+      }
+    ]
+  }
+{% endschema %}

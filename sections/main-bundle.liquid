@@ -1,0 +1,496 @@
+{{ 'main-bundle.css' | asset_url | stylesheet_tag }}
+<div class="product-popup">
+    {% render 'product-popup' %}
+</div>
+<div class="bundle-collection {{ template.suffix }}">
+    {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when '@app' -%}
+            {% render block %}
+        {% endcase %}
+    {% endfor %}
+    <bundle-builder>
+        
+        <div class="bundle-wrapper main-bundle" data-store-currency="{{ cart.currency.symbol }}">
+            <div class="bundle-title">
+                <h1 class="title">
+                    {% if section.settings.title != blank %}
+                        {{ section.settings.title }}
+                    {% else %}
+                        Build a Bundle
+                    {% endif %}
+                </h1>
+            </div>
+            
+                <div class="bundle-meta__container-mobile mobile">
+                    <div class="bundle-meta-title">
+                        <h2 class="title">
+                            {% if section.settings.bundle_title != blank %}
+                                {{ section.settings.bundle_title }}
+                            {% else %}
+                                Let’s get started
+                            {%  endif %}
+                        </h2>
+                        <span class="sub-title">
+                            {% if section.settings.bundle_sub_title != blank %}
+                                {{ section.settings.bundle_sub_title }}
+                            {% else %}
+                                Select your box size and start adding flavors!
+                            {%  endif %}
+                        </span>
+                    </div>
+                    <div class="offer_container">
+                        <div class="offer_box">
+                            <p>
+                                <span class="bold colored_red">
+                                    {% if section.settings.boxes_two_discount != blank %}
+                                        {{ section.settings.boxes_two_discount }}
+                                    {% else %}
+                                        10% OFF
+                                    {%  endif %}
+                                </span>
+                            </p>
+                            <div class="box" data-value="2" js-bundle-type-selector-mobile>
+                                <p class="bold"> 2 BOXES </p>
+                                <p class="price-bar">$3.26/Bar</p>
+                            </div>
+
+                        </div>
+                        <div class="offer_box">
+                            <p>
+                                <span class="bold colored_red">
+                                    {% if section.settings.boxes_three_discount != blank %}
+                                        {{ section.settings.boxes_three_discount }}
+                                    {% else %}
+                                        20% OFF
+                                    {%  endif %}
+                                </span>
+                            </p>
+                            <div class="box" data-value="3" js-bundle-type-selector-mobile>
+                                <p class="bold"> 3 BOXES </p>
+                                <p class="price-bar">$3.26/Bar</p>
+                            </div>
+                            <div class="popular-text">popular</div>
+
+                        </div>
+                        <div class="offer_box">
+                            <p>
+                            <span class="bold colored_red">
+                                {% if section.settings.boxes_four_discount != blank%}
+                                    {{ section.settings.boxes_four_discount }}
+                                {% else %}
+                                    30% OFF
+                                {%  endif %}
+                            </span>
+                            </p>
+                            <div class="box" data-value="4" js-bundle-type-selector-mobile>
+                                <p class="bold">4+ BOXES </p>
+                                <p class="price-bar">$3.26/Bar</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="price-flexer" js-bunlde-price-wrapper>
+                        <span class="bold-text">PRICE:</span>
+                        <span class="bold-price" js-bundle-regular-price>$0</span>
+                        <span class="bold-price compare-price" js-bundle-compare-price><!-- $0 --></span>
+                    </div>
+                    <input hidden js-selling-plan-discount data-percent="" />
+                </div>
+        </div>
+        <div class="bundle-collection__wrapper page-width">
+            <div class="nav_main-wrapper">
+                <div class="bundle-collection__filters" js-mobile-nav-wrapper>
+                    <div class="mobile custom__select-drop" js-mobile-nav-drop>
+                        <div class="drop__selected">
+                            {% for collection in section.settings.choose_collection limit:1 %}
+                                <span>{{collection.title}}</span>
+                            {% endfor %}
+                        </div>
+                        <div class="drop__select">
+                            <div class="dropdown__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M19 8.625L12.25 15.375L5.5 8.625" stroke="#3E2B2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bundle-collection__filters-item">
+                        {%- for collection in section.settings.choose_collection -%}
+                            <div class="bundle-all-sizes collection-title drop__option {% if forloop.index == 1 %} selected {% endif %}" js-collection-links data-collection-link="{{ collection.url }}">
+                                <span>
+                                    {{ collection.title }}
+                                </span>
+                            </div>
+                        {%- endfor -%}
+                    </div>
+                </div>
+            </div>
+            <div class="bundle-collection__grid-container">
+                {% comment %} {{ 'component-facets.css' | asset_url | stylesheet_tag }}
+                <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+                <div class="bundle-facets"></div>
+                    <div class="bundle-grid__wrapper">
+                        <div class="bundle-grid">
+
+
+                          {%- assign defaultTemplate = blank -%}
+                          {%- assign page_url = content_for_header | split:'"pageurl":"' | last | split:'"' | first | split: request.host | last | replace:'\/','/' | replace:'%20',' ' | replace:'\u0026','&'  -%}
+                          {%- unless page_url contains "?" -%}{% break %}{%- endunless -%}
+                          {%- assign query_string = page_url | split:'?' | last -%}
+                          {%- assign qry_parts= query_string | split:'&' -%}
+                          
+                            {%- for part in qry_parts -%}
+                              {%- assign key_and_value = part | split:'=' -%}
+                              {%- if key_and_value.size > 1 -%}
+                                {% if key_and_value[0] == 'default' %}
+                                 {%- assign defaultTemplate = key_and_value[1] | strip -%}
+                                {% endif %}
+                              {%- endif -%}
+                           {%- endfor -%}
+                          
+                              {%- assign firstCollection = collection -%}
+                              {%- if section.settings.choose_collection != blank and defaultTemplate == blank -%}
+                                {%- assign firstCollection = section.settings.choose_collection | first -%}
+                              {%- endif -%}
+                         
+                            <ul
+                                id="product-grid"
+                                data-id="{{ section.id }}"
+                                class="
+                                    grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
+                                    grid--{{ section.settings.columns_desktop }}-col-desktop
+                                    {% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %}
+                                "
+                                >
+
+                             
+                                {%- for product in firstCollection.products -%}
+                                    {% assign lazy_load = false %}
+                                    {%- if forloop.index > 2 -%}
+                                    {%- assign lazy_load = true -%}
+                                    {%- endif -%}
+                                    <li
+                                    class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {% if product.metafields.custom.bundle_popup_media.value.media_type != blank or
+                                        product.metafields.custom.bundle_popup_description != blank or
+                                        product.metafields.custom.product_meta_title_accordion_1 != blank or 
+                                        product.metafields.custom.product_meta_title_accordion_2 != blank or
+                                        product.metafields.custom.product_ingredients_selections != blank
+
+                                    %} active {% endif %}"
+                                    {% if settings.animations_reveal_on_scroll %}
+                                        data-cascade
+                                        style="--animation-order: {{ forloop.index }};"
+                                    {% endif %}
+                                    js-product-popup-datas
+                                    data-product-id="{{ product.selected_or_first_available_variant.id }}"
+                                    data-product-title="{{product.title }}"
+                                    data-ingredient-size-type="{{ product.metafields.custom.product_grid_size_type.value }}"
+                                    data-ingredient-protein-text="{{ product.metafields.custom.product_grid_protein_text.value }}"
+                                    data-ingredient-bars-text="{{ product.metafields.custom.product_grid_bars_text.value }}"
+                                    data-bundle-popup-media-src="{{ product.images[1].src |  image_url: width: "800x"  }}"
+                                    {% comment %} {% if product.metafields.custom.bundle_popup_media.value %}
+                                      {% if product.metafields.custom.bundle_popup_media.value.media_type == 'video' %}
+                                          data-bundle-popup-media-src="{{ product.metafields.custom.bundle_popup_media.value.sources[1].url }}"
+                                      {% else %}
+                                          data-bundle-popup-media-src="{{ product.metafields.custom.bundle_popup_media.value | image_url: width: "800x" }}"
+                                      {% endif %}
+                                    {% endif %} {% endcomment %}
+                                    data-bundle-popup-media-type="{{ product.metafields.custom.bundle_popup_media.value.media_type }}"
+                                    data-bundle-popup-product-description="{{ product.metafields.custom.bundle_popup_description }}"
+
+                                    data-bundle-popup-accordion-1-title="{{ product.metafields.custom.product_meta_title_accordion_1 }}"
+                                    data-bundle-popup-accordion-1-detail="{{ product.metafields.custom.product_meta_detail_accordion_1 | metafield_text }}"
+
+                                    data-bundle-popup-accordion-2-title="{{ product.metafields.custom.product_meta_title_accordion_2 }}"
+                                    data-bundle-popup-accordion-2-detail="{{ product.metafields.custom.product_meta_detail_accordion_2 | metafield_text }}"
+
+                                    {%- if product.metafields.custom.product_ingredients_selections != blank -%}
+                                        {%- assign Ingredients_Value = product.metafields.custom.product_ingredients_selections.value -%}
+                                        {%- if Ingredients_Value.main_title_text.value != blank and Ingredients_Value.left_description_text.value != blank -%}
+                                          data-bundle-popup-ingredients-title="{{ Ingredients_Value.main_title_text.value }}"
+                                            {%- if Ingredients_Value.left_description_text.value != blank -%}
+                                                    data-bundle-popup-ingredients-title="{{ Ingredients_Value.main_title_text }}"
+                                                    data-bundle-popup-ingredients-description="{{ Ingredients_Value.left_description_text | metafield_text }}"
+                                                  
+                                                {%- assign product_ingredients_Value = product.metafields.custom.product_ingredients_selections.value -%}
+                                                {% if product_ingredients_Value %}
+                                                    data-bundle-popup-bottom-ingredient-media="{{ product_ingredients_Value.right_desktop_table_image | image_url: width:800 }}"
+                                                {% endif %}
+                                            {%- endif -%}
+                                        {%- endif -%}
+                                      {%- endif -%}
+                                    >
+
+                                    {%- if product.metafields.custom.product_ingredients_selections != blank -%}
+                                        {%- assign Ingredients_Value = product.metafields.custom.product_ingredients_selections.value -%}
+                                        {%- if Ingredients_Value.main_title_text.value != blank and Ingredients_Value.left_description_text.value != blank -%}
+                                            {%- if Ingredients_Value.left_description_text.value != blank -%}
+                                                
+                                                    <div class="hidden" js-data-bundle-popup-ingredients-title>{{ Ingredients_Value.main_title_text.value }}</div>
+                                                    <div class="hidden" js-data-bundle-popup-ingredients-description>{{ Ingredients_Value.left_description_text | metafield_tag }}</div>
+                                            {%- endif -%}
+                                        {%- endif -%}
+                                        {%- endif -%}
+                                        
+                                    <div class="hidden" js-data-bundle-popup-accordion-1-title>{{ product.metafields.custom.product_meta_title_accordion_1 }}</div>
+                                    <div class="hidden" js-data-bundle-popup-accordion-1-detail>{{ product.metafields.custom.product_meta_detail_accordion_1 | metafield_tag }}</div>
+                                    <div class="hidden" js-data-bundle-popup-accordion-2-title>{{ product.metafields.custom.product_meta_title_accordion_2 }}</div>
+                                    <div class="hidden" js-data-bundle-popup-accordion-2-detail>{{ product.metafields.custom.product_meta_detail_accordion_2 | metafield_tag }}</div>
+                                    {% render 'card-product',
+                                        card_product: product,
+                                        media_aspect_ratio: section.settings.image_ratio,
+                                        image_shape: section.settings.image_shape,
+                                        show_secondary_image: true,
+                                        show_vendor: section.settings.show_vendor,
+                                        show_rating: section.settings.show_rating,
+                                        lazy_load: lazy_load,
+                                        quick_add: 'standard',
+                                        section_id: section.id,
+                                        product_grid_bundle_image: product.metafields.custom.product_grid_bundle_image
+                                    %}
+                                    </li>
+                                {%- endfor -%}
+                            </ul>
+                        </div>
+                        <div class="bundle-meta__container">
+                            <div class="bundle-meta__wrapper">
+                                <div class="bundle-meta__title-wrapper">
+                                    <div class="bundle-meta-title">
+                                        <span class="title">
+                                            {% if section.settings.bundle_title != blank %}
+                                                {{ section.settings.bundle_title }}
+                                            {% else %}
+                                                Let’s get started
+                                            {%  endif %}
+                                        </span>
+                                        <span class="sub-title">
+                                            {% if section.settings.bundle_sub_title != blank %}
+                                                {{ section.settings.bundle_sub_title }}
+                                            {% else %}
+                                                Select your box size and start adding flavors!
+                                            {%  endif %}
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="bundle-meta__products-wrapper">
+                                    <div class="box_shadow " js-selected-products-wrapper>
+                                        <div class="box-shadow__inner">
+                                            <div class="offer_container" style="display: none">
+                                                <div class="offer_box">
+                                                    <p>
+                                                        <span class="bold colored_red">
+                                                            {% if section.settings.boxes_two_discount != blank %}
+                                                                {{ section.settings.boxes_two_discount }}
+                                                            {% else %}
+                                                                10% OFF
+                                                            {%  endif %}
+                                                        </span>
+                                                    </p>
+                                                    <div class="box" data-value="2" js-bundle-type-selector>
+                                                        <p class="bold"> 2 BOXES </p>
+                                                        <p class="price-bar">$3.26/Bar</p>
+                                                    </div>
+
+                                                </div>
+                                                <div class="offer_box">
+                                                    <p>
+                                                        <span class="bold colored_red">
+                                                            {% if section.settings.boxes_three_discount != blank %}
+                                                                {{ section.settings.boxes_three_discount }}
+                                                            {% else %}
+                                                                20% OFF
+                                                            {%  endif %}
+                                                        </span>
+                                                    </p>
+                                                    <div class="box" data-value="3" js-bundle-type-selector>
+                                                        <p class="bold"> 3 BOXES </p>
+                                                        <p class="price-bar">$3.26/Bar</p>
+                                                    </div>
+                                                    <div class="popular-text">popular</div>
+
+                                                </div>
+                                                <div class="offer_box">
+                                                    <p>
+                                                        <span class="bold colored_red">
+                                                            {% if section.settings.boxes_four_discount != blank %}
+                                                                {{ section.settings.boxes_four_discount }}
+                                                            {% else %}
+                                                                30% OFF
+                                                            {%  endif %}
+                                                        </span>
+                                                    </p>
+                                                    <div class="box" data-value="4" js-bundle-type-selector>
+                                                        <p class="bold">4+ BOXES </p>
+                                                        <p class="price-bar">$3.26/Bar</p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="price-flexer" js-bunlde-price-wrapper>
+                                                <span class="bold-text">PRICE:</span>
+                                                <span class="bold-price" js-bundle-regular-price>$0</span>
+                                                <span class="bold-price compare-price" js-bundle-compare-price><!-- $0 --></span>
+                                            </div>
+                                            <div class="selected-bundle">
+                                                <h3 class="selected-text">Your Bundle (<span js-selection-count>1/3</span> Selected)</h3>
+                                                <div class="selected-cross-icon" js-bundle-products-list-cross-btn>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0_73_32721)">
+                                                        <path d="M19.4253 4.5752L4.57605 19.4244" stroke="#3E2B2E" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+                                                        <path d="M19.4239 19.4244L4.57471 4.5752" stroke="#3E2B2E" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+                                                        </g>
+                                                        <defs>
+                                                        <clipPath id="clip0_73_32721">
+                                                        <rect width="24" height="24" fill="white"/>
+                                                        </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="adding-card_container" js-selection-box-list>
+                                                <div class="adding-card">
+                                                    <div class="card-image">
+                                                        <img src="" alt="image">
+                                                    </div>
+                                                    <div class="product-card">
+                                                        <h3 class="product-card__title">Dark Chocolate Chip Peanut Butter</h3>
+                                                        <div class="product-card__size">
+                                                            Full Size
+                                                            <span class="card-dott"></span>
+                                                            <span>8 Bars</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-icon">
+                                                        <div class="plus-icon" js-bundle-product-plus-icon>
+                                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <g clip-path="url(#clip0_38_22502)">
+                                                                <path d="M8 1.3335V14.6668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M14.6666 8H1.33325" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </g>
+                                                                <defs>
+                                                                <clipPath id="clip0_38_22502">
+                                                                <rect width="16" height="16" fill="white"/>
+                                                                </clipPath>
+                                                                </defs>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="cross-icon" js-bundle-product-cross-icon >
+                                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <g clip-path="url(#clip0_38_27706)">
+                                                                <path d="M12.7141 3.28564L3.28602 12.7137" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M12.714 12.7137L3.28589 3.28564" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </g>
+                                                                <defs>
+                                                                <clipPath id="clip0_38_27706">
+                                                                <rect width="16" height="16" fill="white"/>
+                                                                </clipPath>
+                                                                </defs>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {% comment %} <div class="content-bottom">
+                                                <div class="content-bottom__flexer" js-subscription-selling-plan data-subscription-selling-plan-id="{{  section.settings.selling_plan_id }}" data-subscription-selling-plan-discount="{{ section.settings.selling_plan_discount }}">
+                                                    <span class="content-bottom__text">{% if section.settings.selling_plan_discount %}Subscribe and save an additional <span js-total-subscription-discount> {{section.settings.selling_plan_discount}}% </span> {% endif %}</span>
+                                                    <div class="content-bottom__button" js-subscription-checkbox checked="false">
+                                                        <span class="circle-icon"></span>
+                                                    </div>
+                                                </div>
+                                            </div> {% endcomment %}
+                                        </div>
+                                        <div class="adding_box_button" js-selection-count-wrapper>
+                                            <button class="add_box"><span js-selection-count > </span> <span js-atc-btn-text>ADD A BOX TO START</span></button>
+                                        </div>
+                                        <div class="adding_box_button hidden" js-bundle-addToCart-btn>
+                                            <button class="add_box" type="submit">
+                                                <span js-bundle-atc-btn-span class="bundle__atcbtn-content">
+                                                    ADD TO CART – <span js-bundle-regular-price></span> <span class="compare-price" js-bundle-compare-price></span>
+                                                </span>
+                                                <div class="loading__spinner">
+                                                    <svg aria-hidden="true" focusable="false" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </bundle-builder>
+</div>
+<script src="{{ 'build-bundle.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'bundle-info-popup.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+  {
+    "name": "Main Bundle",
+    "blocks": [
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+          "type": "collection_list",
+          "id": "choose_collection",
+          "label": "Please Select Collections"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "text",
+            "id": "selection_box_title",
+            "label": "Selection Box Title"
+        },
+        {
+            "type": "text",
+            "id": "bundle_title",
+            "label": "Bundle Title"
+        },
+        {
+            "type": "text",
+            "id": "bundle_sub_title",
+            "label": "Bundle Sub Title"
+        },
+        {
+            "type": "text",
+            "id":"boxes_two_discount",
+            "label": "Two Boxes Discount"
+        },
+        {
+            "type": "text",
+            "id":"boxes_three_discount",
+            "label": "Three Boxes Discount"
+        },
+        {
+            "type": "text",
+            "id":"boxes_four_discount",
+            "label": "Four Boxes Discount"
+        },
+        {
+            "type": "text",
+            "id": "selling_plan_id",
+            "label": "Selling Plan ID"
+        },
+        {
+            "type": "text",
+            "id": "selling_plan_discount",
+            "label": "Selling Plan Discount Percentage (10, 20)"
+        }
+    ],
+    "presets": [
+      {
+        "name": "Main Bundle"
+      }
+    ]
+  }
+{% endschema %}

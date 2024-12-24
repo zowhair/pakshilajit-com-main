@@ -1,0 +1,50 @@
+{{'custom-lab-test.css' |  asset_url |  stylesheet_tag }}
+<div class="custom_lab_test">
+    <div class="page-width">
+        <div class="custom_lab_test--wrapper">
+            <div class="custom_lab_test__content_area">
+                {% if section.settings.title != blank %}
+                    <h2 class="custom_lab_test--title">{{ section.settings.title }}</h2> 
+                {% endif %}
+                {% if  section.settings.para != blank %}
+                    <div class="custom_lab_test--paragraph">{{ section.settings.para }}</div>
+                {% endif %}
+                {% if section.settings.btn_text != blank %}
+                    <a href="{{ section.settings.btn_url }}" class="custom_lab_test--button">{{ section.settings.btn_text }}</a>
+                {% endif %}
+            </div> 
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+    "name": "Custom Lab Test",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "richtext",
+            "id": "para",
+            "label": "Paragraph"
+        },
+        {
+            "type": "text",
+            "id": "btn_text",
+            "label": "Button Text"
+        },
+        {
+            "type": "url",
+            "id": "btn_url",
+            "label": "Button Url"
+        }  
+        ],
+        "presets": [
+            {
+                "name": "Custom Lab Test"
+            }
+        ]
+}
+{% endschema %}

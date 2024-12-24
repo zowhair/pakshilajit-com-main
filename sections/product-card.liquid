@@ -1,0 +1,96 @@
+{{ 'product-card.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<div class="product_card">
+  <div class="page-width">
+    <div class="product_card__wrapper">
+      <div class="product_card__title-wrapper">
+        {%- if section.settings.title != blank -%}
+          <h2 class="product_card__main-title">{{ section.settings.title }}</h2>
+        {%- endif -%}
+        {% if section.settings.description != blank %}
+          <p class="product_card__main-desc">{{ section.settings.description }}</p>        
+        {% endif %}
+      </div>
+      <div class="product_card__grid">
+        {% for block in section.blocks %}
+          {% assign product = block.settings.product %}
+          {% if product.featured_image != blank or product.title != blank %}
+            <div class="product_card-__item">
+              <a href="{{ product.url }}" class="product_card__inner">
+                {% if product.featured_image != blank %}
+                  <div class="product_card__image">
+                    <img src="{{ product.featured_image |  image_url: width: "600x" }}" alt="">
+                  </div>
+                {% endif %}
+                {% if product.title != blank or product.price != blank %}
+                  <div class="inner-text-wrap">
+                    <span class="product__per-shot">$3.50 PER SHOT</span>
+                    <p class="product__sub--title">{{ product.title }}</p>
+                  </div>
+                  <div class="product__content-wrap">
+                    <div class="price-inner">
+                      {% comment %} <span class="price_per-g">30g</span> {% endcomment %}
+                      <div class="price_wrapper">
+                        <span class="product__price price">{{ product.price | money }}</span>
+                        <span class="product__compare-price price">{{ product.compare_at_price | money }}</span>
+                      </div>
+                    </div>
+                    <div class="product-form__buttons view__product-button">
+                      <div class="product-form__submit">
+                        <span>View Product</span>
+                      </div>
+                    </div>
+                    {%- render 'buy-buttons',
+                      block: block,
+                      product: product,
+                      product_form_id: product_form_id,
+                      section_id: section.id,
+                      show_pickup_availability: true
+                    -%}
+                  </div>
+                {% endif %}
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product Card",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_block",
+      "name": "Product",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Choose Product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Card"
+    }
+  ]
+}
+{% endschema %}

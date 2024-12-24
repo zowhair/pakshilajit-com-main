@@ -1,0 +1,33 @@
+{{ 'product-popup.css' | asset_url | stylesheet_tag }}
+<div class="product-popup-main" js-main-popup>
+  <div class="product-popup_overlay " js-overlay></div>
+  <div class="wrapper">
+    <div class="main-grid">
+      <div class="product-popup_header">
+        <div class="product-content">
+          <div class="content" js-content-wrap></div>
+          <div class="review" js-content-review-element></div>
+        </div>
+        <div class="cross-icon" js-modal-close-icon>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <g clip-path="url(#clip0_1_12283)">
+            <path d="M19.4243 4.5752L4.57507 19.4244" stroke="#3E2B2E" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+            <path d="M19.4249 19.4244L4.57568 4.5752" stroke="#3E2B2E" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+            </g><defs><clipPath id="clip0_1_12283"> <rect width="24" height="24" fill="white"/></clipPath></defs>
+          </svg>
+        </div>
+      </div>
+      <div class="popup-inner">
+        <div class="image_with_video" js-media-wrap></div>
+        <div js-description-wrap></div>
+        <ul class="accordion-wrapper list-unstyled accordion" js-accordion-wrap></ul>
+        <div class="nutrition-wrapper" js-ingredient-wrap></div>
+      </div>
+      <div class="button-wrap">
+        <div class="button-block">
+          <button class="button_popup" js-popup-atb-btn js-add-to-bundle-btn>ADD TO BUNDLE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

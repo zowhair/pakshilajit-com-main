@@ -1,0 +1,90 @@
+.lab_test_info {
+  padding: 40px 0;
+}
+.lab_test_info img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.lab_test_info .wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.lab_test_info .info-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-align: center;
+  margin: 0 0 24px;
+}
+.lab_test_info .info-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.2;
+  text-align: center;
+  display: block;
+  margin: 0 0 30px;
+}
+.lab_test_info .info_item--title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+  margin: 0 0 24px;
+  color: #000;
+}
+.lab_test_info .info_item--text p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000;
+  margin: 0;
+}
+.lab_test_info .info_item--text p:not(:last-child) {
+  margin: 0 0 12px;
+}
+.lab_test_info .content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px -20px;
+}
+.lab_test_info .info_item {
+  max-width: 50%;
+  flex: 50%;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+.lab_test_info .info_item--inner {
+  border: 1px solid #000;
+  padding: 24px 20px;
+  height: 100%;
+  border-radius: 24px;
+}
+@media screen and (max-width: 990px) {
+  .lab_test_info .info_item--text p {
+    font-size: 14px;
+  }
+  .lab_test_info .info_item--title {
+    font-size: 20px;
+    margin: 0 0 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .lab_test_info .page-width {
+    padding: 0 20px;
+  }
+  .lab_test_info .content {
+    margin: 0 0 -24px;
+  }
+  .lab_test_doc .info--title {
+    font-size: 24px;
+  }
+  .lab_test_info .info_item {
+    max-width: 100%;
+    flex: 100%;
+    padding: 0;
+    margin-bottom: 24px;
+  }
+}

@@ -1,0 +1,77 @@
+.custom_lab_test {
+    background-color: #E4FFE0FF;
+    padding: 70px 0;
+}
+.custom_lab_test .page-width { 
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+.custom_lab_test__content_area {
+    text-align: center;
+}
+.custom_lab_test--title {
+    color: #131313FF;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.153;
+    letter-spacing: 0.6px; 
+   margin: 0 0 30px;
+} 
+.custom_lab_test--paragraph {
+    color: #131313FF;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.6px;
+    margin: 0 auto 30px;
+    max-width: 1000px;
+}
+.custom_lab_test--paragraph p { 
+    margin: 0;
+}
+.custom_lab_test--button {
+    color: #000;
+    font-size: 20px;
+    transition: all .3s cubic-bezier(.4,0,.2,1);
+    font-weight: 700;
+    line-height: 1;
+    padding: 20px 30px;
+    letter-spacing: 2px;
+    background-color: #f1b51e;
+    border-radius: 20px;
+    text-transform: uppercase;
+    display: block;
+    max-width: 347px;
+    margin: 0 auto; 
+    text-decoration: none;
+}
+@media screen and (max-width:990px) {
+    .custom_lab_test--title { 
+        font-size: 40px;
+        margin: 0 0 24px;
+    }
+    .custom_lab_test--paragraph {
+        font-size: 18px;
+        margin: 0 0 24px;
+    }
+}
+@media screen and (max-width:767px) {
+    .custom_lab_test { 
+        padding: 40px 0;
+    }
+    .custom_lab_test--title {
+        font-size: 32px; 
+        line-height: 1.3125;
+        margin: 0 0 10px;
+    } 
+    .custom_lab_test--paragraph {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0 0 30px;
+    }
+    .custom_lab_test--button {
+        padding: 14px 12px;
+        max-width: 200px;
+    }
+}
